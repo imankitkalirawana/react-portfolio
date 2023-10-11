@@ -6,7 +6,7 @@ const Services = {
       image: "/imankitkalirawana.jpg",
       description: "Knowledge of more than 5 programming languages",
       color: "#fc9401",
-      background: "#56360a",
+      background: "#fc93014d",
     },
     {
       id: "2",
@@ -14,7 +14,7 @@ const Services = {
       image: "/imankitkalirawana.jpg",
       description: "Knowledge of more than 5 programming languages",
       color: "#e7385d",
-      background: "#431922",
+      background: "#e7385e3e",
     },
     {
       id: "3",
@@ -22,7 +22,7 @@ const Services = {
       image: "/imankitkalirawana.jpg",
       description: "Knowledge of more than 5 programming languages",
       color: "#604868",
-      background: "#231d26",
+      background: "#60486841",
     },
     {
       id: "4",
