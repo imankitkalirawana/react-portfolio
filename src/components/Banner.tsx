@@ -1,6 +1,5 @@
 import ReactTyped from "react-typed";
 import { Link } from "react-router-dom";
-import AvatarImg from "/imankitkalirawana.jpg";
 
 type Props = {
   abouts: {

@@ -1,4 +1,8 @@
 function Skills() {
-  return <div>Skills</div>;
+  return <>
+  <div className="popup">
+    
+  </div>
+  </>;
 }
 export default Skills;

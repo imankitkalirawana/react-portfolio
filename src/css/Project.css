@@ -16,7 +16,7 @@
     justify-content: center;
     grid-gap: 0.5rem;
     width: 300px;
-    background: var(--bg-extra-light);
+    background: var(--lighter);
     padding: 1rem;
     border-radius: 10px;
     position: relative;
@@ -53,9 +53,10 @@
     bottom: 0rem;
     right: 0rem;
     padding: 1rem;
-    background: var(--primary-color);
+    background: var(--primary);
     border-radius: 10px 0 10px 0;
     opacity: 0;
+    color: #fff;
     transition: 0.3s ease-in;
 }
 

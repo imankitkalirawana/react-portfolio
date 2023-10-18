@@ -14,10 +14,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Outfit;
+    font-family: var(--font);
     box-sizing: border-box;
-    background: var(--bg-light);
-    color: var(--font-dark);
+    background: var(--light);
+    color: var(--dark);
     transition: 0.3s ease;
 }
 
@@ -49,7 +49,7 @@ a {
     padding: 8px 16px;
     border-radius: 10px;
     margin: 0 5px;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--border);
     transition: 0.3s ease;
     font-family: Outfit;
     background: transparent;
@@ -60,11 +60,11 @@ a {
 
 .btn-primary {
     color: #6e50fd;
-    background: #fff;
+    background: var(--primary);
 }
 
 .btn-submit {
-    color: var(--font-dark);
+    color: var(--dark);
 }
 
 .view-more-btn {
@@ -80,7 +80,7 @@ a {
 }
 
 .btn:focus {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--primary);
 }
 
 header {
@@ -121,7 +121,7 @@ header {
 .header-scroll .header {
     background: var(--bg-ambient);
     box-shadow: var(--ambient-box-shadow);
-    color: var(--font-dark);
+    color: var(--dark);
     backdrop-filter: blur(30px);
     padding: 2rem;
     border-radius: 50px;
@@ -218,14 +218,20 @@ header {
     display: flex;
 }
 
+.header .btn-primary {
+    background: #fff;
+    color: var(--primary);
+    border: #fff;
+}
+
 .header-scroll .btn-primary {
     color: #fff !important;
-    background: #6e50fd;
-    border-color: #6e50fd;
+    background: var(--primary);
+    border: var(--primary);
 }
 
 .header-scroll .btn-primary:hover {
-    background: rgb(110, 80, 253, 0.9);
+    background: #6e50fde6;
 }
 
 .header .header-menu-open {
@@ -250,8 +256,8 @@ header {
 .header-side {
     position: fixed;
     width: 100%;
-    background: var(--bg-light);
-    color: var(--font-dark);
+    background: var(--light);
+    color: var(--dark);
     top: 0;
     height: 100%;
     top: -200%;
@@ -472,7 +478,7 @@ header {
 .topic-heading::before {
     content: "";
     position: absolute;
-    color: var(--primary-color);
+    color: var(--primary);
     font-size: 10px;
     font-weight: bold;
     left: 50%;
@@ -549,7 +555,7 @@ header {
 .specilize-card p {
     font-weight: 400;
     font-size: 14px;
-    color: var(--font-faded);
+    color: var(--faded);
 }
 
 /* Skills */
@@ -600,7 +606,7 @@ header {
 
 .skills-card-left .progress-bar {
     width: 80%;
-    background: var(--bg-light);
+    background: var(--light);
     margin: 10px 0;
     border-radius: 10px;
 }
@@ -621,7 +627,7 @@ header {
     border-radius: 10px;
     margin: 0 20px;
 
-    background: var(--primary-color);
+    background: var(--primary);
 }
 
 /* Education */
@@ -632,7 +638,7 @@ header {
 }
 
 .education-card::before {
-    color: var(--primary-color);
+    color: var(--primary);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 12px;
@@ -657,7 +663,7 @@ header {
 .education-pre p {
     font-size: 12px;
     font-weight: 500;
-    color: var(--font-faded);
+    color: var(--faded);
     margin: 5px 0;
 }
 
@@ -668,7 +674,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--secondary-color);
+    background: var(--secondary);
     border-radius: 20px;
     padding: 25px;
     margin: 50px auto;
@@ -694,13 +700,13 @@ header {
 
 .about-name {
     margin: 0;
-    color: var(--primary-color);
+    color: var(--primary);
     font-size: 12px;
 }
 
 .about-name::before {
     content: "Web Developer - ";
-    color: var(--font-faded);
+    color: var(--faded);
     font-weight: 400;
 }
 
@@ -734,7 +740,7 @@ header {
 }
 
 .contact-left-up p {
-    color: var(--font-faded);
+    color: var(--faded);
     font-size: 12px;
     font-weight: 600;
     margin: 20px 0;
@@ -745,7 +751,7 @@ header {
 }
 
 .contact-left-down {
-    color: var(--primary-color);
+    color: var(--primary);
     font-weight: 600;
     font-style: italic;
     white-space: nowrap;
@@ -755,7 +761,7 @@ header {
 }
 
 .contact-left-down:hover {
-    color: var(--font-dark);
+    color: var(--dark);
 }
 
 .contact-left-down p {
@@ -766,7 +772,7 @@ header {
 .contact-right .label {
     font-size: 12px;
     font-weight: 600;
-    color: var(--font-faded);
+    color: var(--faded);
     margin-top: 10px;
 }
 
@@ -774,7 +780,7 @@ input,
 textarea {
     border: 2px solid transparent;
     outline: none;
-    color: var(--font-dark);
+    color: var(--dark);
     background: var(--bg-active);
     border-radius: 4px;
     padding: 8px 12px;
@@ -785,13 +791,13 @@ textarea {
 }
 
 ::placeholder {
-    color: var(--font-dark);
+    color: var(--dark);
     opacity: 0.6;
 }
 
 input:focus {
-    border: 2px solid var(--primary-color);
-    outline: 3px solid var(--secondary-color);
+    border: 2px solid var(--primary);
+    outline: 3px solid var(--secondary);
 }
 
 @media (max-width: 1284px) {
