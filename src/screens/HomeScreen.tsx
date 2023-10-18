@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Services from "../ServicesData";
+import Footer from "../components/Footer";
 
 function HomeScreen() {
   return (
@@ -20,6 +21,7 @@ function HomeScreen() {
       />
       <About abouts={Services.aboutMe} />
       <Contact contact={Services.website} />
+      <Footer links={Services.links} />
     </>
   );
 }

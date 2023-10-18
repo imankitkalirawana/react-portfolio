@@ -35,6 +35,10 @@
     background: var(--light);
 }
 
+.popup textarea::placeholder {
+    font-size: 13px;
+}
+
 
 .form-group {
     display: flex;

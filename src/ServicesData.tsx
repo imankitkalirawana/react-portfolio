@@ -305,6 +305,44 @@ const Services = {
       link: "https://www.coursera.org/account/accomplishments/certificate/8Y8T5JQ7K3Z8",
     },
   ],
+  links: [
+    {
+      id: 1,
+      title: "X",
+      link: "https://twitter.com/divinelydevs",
+      icon: "fa-brands fa-twitter",
+      // <i class="fa-brands fa-x-twitter"></i>
+      color: "#22a0f0",
+    },
+    {
+      id: 2,
+      title: "LinkedIn",
+      link: "https://linkedin.com/in/bhuneshvar",
+      icon: "fa-brands fa-linkedin",
+      color: "#0077b5",
+    },
+    {
+      id: 3,
+      title: "Telegram",
+      link: "https://telegram.me/divinelydevelopers",
+      icon: "fa-brands fa-telegram-plane",
+      color: "#0088cc",
+    },
+    {
+      id: 4,
+      title: "Instagram",
+      link: "https://instagram.com/divinelydevs",
+      icon: "fa-brands fa-instagram",
+      color: "#e1306c",
+    },
+    {
+      id: 5,
+      title: "Github",
+      link: "https://github.com/imankitkalirawana",
+      icon: "fa-brands fa-github",
+      color: "#333333",
+    },
+  ],
 };
 
 export default Services;

@@ -81,6 +81,7 @@ function Banner({ abouts }: Props) {
                             className="form-control"
                             id="message"
                             name="message"
+                            placeholder="Let's create together..."
                             rows={3}
                           ></textarea>
                         </div>
