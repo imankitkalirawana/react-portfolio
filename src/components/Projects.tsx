@@ -4,7 +4,7 @@ import ImageGallery from "react-image-gallery";
 
 type ProjectsProps = {
   projects: {
-    id: string;
+    id: number;
     title: string;
     images: string[];
     description: string;

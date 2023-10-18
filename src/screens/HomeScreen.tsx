@@ -9,12 +9,16 @@ import Services from "../ServicesData";
 function HomeScreen() {
   return (
     <>
-      <Banner />
+      <Banner abouts={Services.aboutMe} />
       <Specilize services={Services.services} />
       <Projects projects={Services.projects} />
-      <Skills />
-      <About />
-      <Contact />
+      <Skills
+        skills={Services.skills}
+        educations={Services.education}
+        certifications={Services.certificates}
+      />
+      <About abouts={Services.aboutMe} />
+      <Contact contact={Services.website} />
     </>
   );
 }

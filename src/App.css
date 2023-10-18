@@ -52,14 +52,19 @@ a {
     border: 2px solid var(--border-color);
     transition: 0.3s ease;
     font-family: Outfit;
-    color: var(--font-dark);
     background: transparent;
     font-size: 16px;
+    outline: 2px solid transparent;
+    outline-offset: 1px;
 }
 
 .btn-primary {
     color: #6e50fd;
     background: #fff;
+}
+
+.btn-submit {
+    color: var(--font-dark);
 }
 
 .view-more-btn {
@@ -72,6 +77,10 @@ a {
 
 .btn-primary:hover {
     background: rgb(255, 255, 255, 0.9);
+}
+
+.btn:focus {
+    outline: 2px solid var(--primary-color);
 }
 
 header {
@@ -606,71 +615,6 @@ header {
     font-weight: 700;
 }
 
-.fa-html5 {
-    color: #dc4a25;
-}
-
-.html5card .progress-track {
-    background: #dc4a25;
-    width: 95%;
-}
-
-.html5card {
-    background: #dc4a251e;
-}
-
-.fa-css3 {
-    color: #2862e9;
-}
-
-.css3card .progress-track {
-    background: #2862e9;
-    width: 90%;
-}
-
-.css3card {
-    background: #2862e91f;
-}
-
-.fa-js {
-    color: #e8d44d;
-}
-
-.jscard .progress-track {
-    background: #e8d44d;
-    width: 80%;
-}
-
-.jscard {
-    background: #e8d34d2a;
-}
-
-.fa-python {
-    color: #4380b0;
-}
-
-.pythoncard .progress-track {
-    background: #4380b0;
-    width: 80%;
-}
-
-.pythoncard {
-    background: #4381b027;
-}
-
-.fa-react {
-    color: #5ed4f3;
-}
-
-.reactcard .progress-track {
-    background: #5ed4f3;
-    width: 75%;
-}
-
-.reactcard {
-    background: rgba(67, 129, 176, 0.156);
-}
-
 .skills-divider {
     width: 5px;
     height: 100px;
@@ -796,6 +740,10 @@ header {
     margin: 20px 0;
 }
 
+.contact-left-up .btn-submit {
+    margin-top: 1rem;
+}
+
 .contact-left-down {
     color: var(--primary-color);
     font-weight: 600;
@@ -822,8 +770,8 @@ header {
     margin-top: 10px;
 }
 
-.contact-right input,
-.contact-right textarea {
+input,
+textarea {
     border: 2px solid transparent;
     outline: none;
     color: var(--font-dark);
@@ -844,28 +792,6 @@ header {
 input:focus {
     border: 2px solid var(--primary-color);
     outline: 3px solid var(--secondary-color);
-}
-
-.submit {
-    border: none;
-    outline: none;
-    background: #6e50fd;
-    color: #fff;
-    padding: 8px 10px;
-    border-radius: 20px;
-    margin: 10px 0;
-    font-family: Quicksand;
-    border: 2px solid #6e50fd;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.submit:hover {
-    border-radius: 10px;
-}
-
-.submit i {
-    transform: rotate(-45deg);
 }
 
 @media (max-width: 1284px) {

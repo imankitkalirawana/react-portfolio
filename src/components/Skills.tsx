@@ -1,74 +1,79 @@
-function Skills() {
+type Props = {
+  skills: {
+    id: number;
+    percentage: number;
+    image: string;
+    color: string;
+    background: string;
+  }[];
+  educations: {
+    id: number;
+    title: string;
+    institutionShort: string;
+    location: string;
+    year: string;
+  }[];
+  certifications: {
+    id: number;
+    title: string;
+    priority: number;
+    institution: string;
+  }[];
+};
+
+function Skills({ skills, educations, certifications }: Props) {
+  const displaySkills = [...skills]
+    .sort((a, b) => b.percentage - a.percentage)
+    .slice(0, 5);
+  const displayEducation = educations.slice(0, 3);
+  const displayCertification = [...certifications]
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, 3);
+
   return (
     <div className="section skills" id="skills">
       <h2 className="topic-heading skills-heading">Skills & Education</h2>
       <div className="skills-content">
         <div className="skills-content-left">
-          <div className="skills-card-left html5card">
-            <i className="fa-brands fa-html5"></i>
-            <div className="progress-bar">
-              <div className="progress-track"></div>
+          {displaySkills.map((skill) => (
+            <div
+              className="skills-card-left"
+              style={{ background: skill.background }}
+              key={skill.id}
+            >
+              <i className={skill.image} style={{ color: skill.color }}></i>
+              <div className="progress-bar">
+                <div
+                  className="progress-track"
+                  style={{
+                    width: `${skill.percentage}%`,
+                    background: skill.color,
+                  }}
+                ></div>
+              </div>
+              <div className="percentage">{skill.percentage}%</div>
             </div>
-            <div className="percentage">95%</div>
-          </div>
-          <div className="skills-card-left css3card">
-            <i className="fa-brands fa-css3"></i>
-            <div className="progress-bar">
-              <div className="progress-track"></div>
-            </div>
-            <div className="percentage">90%</div>
-          </div>
-          <div className="skills-card-left jscard">
-            <i className="fa-brands fa-js"></i>
-            <div className="progress-bar">
-              <div className="progress-track"></div>
-            </div>
-            <div className="percentage">80%</div>
-          </div>
-          <div className="skills-card-left pythoncard">
-            <i className="fa-brands fa-python"></i>
-            <div className="progress-bar">
-              <div className="progress-track"></div>
-            </div>
-            <div className="percentage">80%</div>
-          </div>
-          <div className="skills-card-left reactcard">
-            <i className="fa-brands fa-react"></i>
-            <div className="progress-bar">
-              <div className="progress-track"></div>
-            </div>
-            <div className="percentage">75%</div>
-          </div>
+          ))}
         </div>
         <div className="skills-divider"></div>
         <div className="skills-content-right">
           <div className="education-card education-crd">
-            <div className="education-pre">
-              <h3>Bachelor of computer science and technology</h3>
-              <p>LPU (2026)</p>
-            </div>
-            <div className="education-pre">
-              <h3>
-                XII<sup>th</sup> from CBSE
-              </h3>
-              <p>ASSS (2021)</p>
-            </div>
-            <div className="education-pre">
-              <h3>
-                X<sup>th</sup> from CBSE
-              </h3>
-              <p>ASSS (2019)</p>
-            </div>
+            {displayEducation.map((education) => (
+              <div className="education-pre" key={education.id}>
+                <h3>{education.title}</h3>
+                <p>
+                  {education.institutionShort} ({education.year})
+                </p>
+              </div>
+            ))}
           </div>
           <div className="education-card certificate-crd">
-            <div className="education-pre">
-              <h3>Introduction to HTML, CSS and Javascript</h3>
-              <p>Coursera</p>
-            </div>
-            <div className="education-pre">
-              <h3>Introduction to Cloud Computing</h3>
-              <p>Coursera</p>
-            </div>
+            {displayCertification.map((certification) => (
+              <div className="education-pre" key={certification.id}>
+                <h3>{certification.title}</h3>
+                <p>{certification.institution}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

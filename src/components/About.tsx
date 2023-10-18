@@ -1,17 +1,29 @@
-import AvatarImg from "/imankitkalirawana.jpg";
-function About() {
+type Props = {
+  abouts: {
+    id: number;
+    name: string;
+    codeName: string;
+    image: string;
+    tagline: string;
+    quote: string;
+  }[];
+};
+
+function About({ abouts }: Props) {
   return (
-    <div className="section about" id="about">
-      <div className="about-up">
-        {/* <img className="about-img" src="/assets/imankitkalirawana.jpg" alt="Bhuneshvar"> */}
-        <img className="about-img" src={AvatarImg} alt="" />
-        <p className="about-pitch">
-          <i>"</i> Technology and AI have the power to change our world, but
-          it's up to us to ensure it's for the betterment of humanity.<i>"</i>
-        </p>
-        <h4 className="about-name">Bhuneshvar</h4>
-      </div>
-    </div>
+    <>
+      {abouts.map((about) => (
+        <div className="section about" id="about">
+          <div className="about-up">
+            <img className="about-img" src={about.image} alt="" />
+            <p className="about-pitch">
+              <i>" {about.quote}"</i>
+            </p>
+            <h4 className="about-name">{about.name}</h4>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 type SpecializeProps = {
   services: {
-    id: string;
+    id: number;
     title: string;
     image: string;
     description: string;
@@ -17,9 +17,9 @@ function Specilize({ services }: SpecializeProps) {
 
       <div className="specilize-content">
         {displayServices.map((service) => (
-          <div className="specilize-card">
+          <div className="specilize-card" key={service.id}>
             <i
-              className="fa-regular fa-browser"
+              className={service.image}
               style={{
                 color: service.color,
                 backgroundColor: service.background,

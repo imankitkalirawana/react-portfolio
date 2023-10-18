@@ -6,6 +6,7 @@
     background: var(--bg-light);
     border-radius: 10px;
     margin: 1rem 0;
+    justify-items: center;
 }
 
 .item {
