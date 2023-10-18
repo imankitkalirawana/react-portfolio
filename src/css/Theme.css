@@ -13,9 +13,10 @@
 :root {
     --primary: #5d74bb;
     --secondary: #c7c8da;
+    --primary-hover: #34296e83;
     --light: #e9f7f7;
     /* --light: #d5d5d5; */
-    --lighter: #e9eef1;
+    --lighter: #E0EDEF;
     --dark: #1d2429;
     --darker: #242c30;
     --font: 'Outfit', sans-serif;
@@ -45,7 +46,8 @@
 
 [data-theme=dark] {
     --primary: #508199;
-    --secondary: #494b64;
+    --primary-hover: rgba(23, 61, 81, 0.455);
+    --secondary: #3e3f50;
     --light: #1d2429;
     --lighter: #242c30;
     --dark: #e9f7f7;

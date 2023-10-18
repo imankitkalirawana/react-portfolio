@@ -55,9 +55,10 @@ a {
     white-space: nowrap;
     padding: 8px 16px;
     border-radius: 10px;
-    border: 2px solid var(--border);
     transition: 0.3s ease;
     font-family: Outfit;
+    border: 2px solid var(--dark);
+    color: var(--dark);
     background: transparent;
     font-size: 16px;
     outline: 2px solid transparent;
@@ -70,6 +71,15 @@ a {
 
 .btn-submit {
     color: var(--dark);
+}
+
+.btn-close {
+    color: var(--dark);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: inherit;
+    border: none;
 }
 
 .view-more-btn {
@@ -173,12 +183,12 @@ header {
 }
 
 .header .header-menu li:hover {
-    background: #34296e83;
+    background: var(--primary-hover);
     border-radius: 10px;
 }
 
 .header .header-menu .menu-theme:hover {
-    background: #34296e83;
+    background: var(--primary-hover);
     border-radius: 10px 10px 0 0;
 }
 
@@ -204,7 +214,7 @@ header {
 }
 
 .header .theme-dropdown span:hover {
-    background: #34296e83;
+    background: var(--primary-hover);
 }
 
 .header .header-menu .menu-theme:hover .theme-dropdown {
@@ -217,6 +227,10 @@ header {
 
 .header .btns {
     display: flex;
+}
+
+.header .btn {
+    border-color: var(--light-const);
 }
 
 .header .btn-primary {
@@ -438,8 +452,11 @@ path {
 }
 
 .banner-top .text-4 {
-
     font-weight: 500;
+}
+
+.banner-top .btn {
+    border-color: var(--light-const);
 }
 
 .banner-top .btn-primary {
@@ -613,7 +630,7 @@ path {
 }
 
 .skills-card-left .percentage {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .skills-divider {
@@ -652,7 +669,7 @@ path {
 
 .education-pre h3 {
     font-weight: 500;
-    margin: 0px;
+    font-size: 16px;
 }
 
 .education-pre p {
@@ -764,7 +781,7 @@ path {
     margin-right: 20px;
 }
 
-.contact-right .label {
+.label {
     font-size: 12px;
     font-weight: 600;
     color: var(--faded);
@@ -776,7 +793,7 @@ textarea {
     border: 2px solid transparent;
     outline: none;
     color: var(--dark);
-    background: var(--bg-active);
+    background: var(--lighter);
     border-radius: 4px;
     padding: 8px 12px;
     margin: 5px 0;
@@ -786,7 +803,7 @@ textarea {
 }
 
 ::placeholder {
-    color: var(--dark);
+    color: var(--faded);
     opacity: 0.6;
 }
 
@@ -846,22 +863,6 @@ input:focus {
 }
 
 
-/* !Popup */
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50vh;
-    background: var(--bg-ambient);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    transition: 0.3s;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+.blur {
+    filter: blur(2px);
 }

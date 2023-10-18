@@ -3,15 +3,6 @@ import { HashLink as Link } from "react-router-hash-link";
 
 function Header() {
   const [scrollClass, setScrollClass] = useState("");
-  const [sliderPosition, setSliderPosition] = useState("-200%");
-
-  const openSlider = () => {
-    setSliderPosition("0%");
-  };
-
-  const closeSlider = () => {
-    setSliderPosition("-200%");
-  };
 
   // !Header Effect
 
@@ -119,18 +110,14 @@ function Header() {
                   Create an account
                 </a>
               </div>
-              <button
-                className="header-menu-open"
-                id="header-menu-open"
-                onClick={openSlider}
-              >
+              <button className="header-menu-open" id="header-menu-open">
                 <i className="fa-duotone fa-bars-staggered"></i>
               </button>
             </div>
           </div>
         </header>
       </div>
-      <div
+      {/* <div
         id="header-side"
         className="header-side"
         style={{ top: sliderPosition }}
@@ -201,7 +188,7 @@ function Header() {
             Create an account
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

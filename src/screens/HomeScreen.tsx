@@ -9,6 +9,7 @@ import Services from "../ServicesData";
 function HomeScreen() {
   return (
     <>
+      {" "}
       <Banner abouts={Services.aboutMe} />
       <Specilize services={Services.services} />
       <Projects projects={Services.projects} />

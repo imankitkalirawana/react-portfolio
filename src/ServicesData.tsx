@@ -116,12 +116,17 @@ const Services = {
   projects: [
     {
       id: 1,
-      title: "Links",
+      title: "Div Calculator",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       technologies: "HTML, CSS, JS",
-      link: "https://github.com/imankitkalirawana/links",
-      previewLink: "https://links-imankitkalirawana.vercel.app",
-      images: ["links-1.png"],
+      link: "https://github.com/imankitkalirawana/div-calculator",
+      previewLink: "https://div-calculator-imankitkalirawana.vercel.app",
+      images: [
+        "div-calculator-1.png",
+        "div-calculator-2.png",
+        "div-calculator-3.png",
+        "div-calculator-4.png",
+      ],
     },
     {
       id: 2,
@@ -150,17 +155,12 @@ const Services = {
     },
     {
       id: 4,
-      title: "Div Calculator",
+      title: "Links",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       technologies: "HTML, CSS, JS",
-      link: "https://github.com/imankitkalirawana/div-calculator",
-      previewLink: "https://div-calculator-imankitkalirawana.vercel.app",
-      images: [
-        "div-calculator-1.png",
-        "div-calculator-2.png",
-        "div-calculator-3.png",
-        "div-calculator-4.png",
-      ],
+      link: "https://github.com/imankitkalirawana/links",
+      previewLink: "https://links-imankitkalirawana.vercel.app",
+      images: ["links-1.png"],
     },
     {
       id: 5,

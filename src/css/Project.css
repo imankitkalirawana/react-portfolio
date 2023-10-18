@@ -44,8 +44,8 @@
 
 .item-description {
     font-size: 12px;
-    font-weight: 400;
-    color: var(--font-faded);
+    font-weight: 500;
+    color: var(--faded);
 }
 
 .item-link {

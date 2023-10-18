@@ -24,7 +24,7 @@ type Props = {
 function Skills({ skills, educations, certifications }: Props) {
   const displaySkills = [...skills]
     .sort((a, b) => b.percentage - a.percentage)
-    .slice(0, 5);
+    .slice(0, 8);
   const displayEducation = educations.slice(0, 3);
   const displayCertification = [...certifications]
     .sort((a, b) => a.priority - b.priority)
