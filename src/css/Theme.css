@@ -11,15 +11,20 @@
 }
 
 :root {
-    --primary: #4f5285;
+    --primary: #5d74bb;
     --secondary: #c7c8da;
-    --light: #d5d5d5;
+    --light: #e9f7f7;
+    /* --light: #d5d5d5; */
     --lighter: #e9eef1;
     --dark: #1d2429;
     --darker: #242c30;
     --font: 'Outfit', sans-serif;
-    --faded: #97a2a8;
+    --faded: #8c8e90;
     --border: #e5ebe9;
+    /* Constant colors */
+    --light-const: #e9eef1;
+    --dark-const: #1d2429;
+    --bg-ambient: rgba(255, 255, 255, 0.318);
 
     /* --font-dark: #2f2f2f;
     --font-light: #fff;
@@ -33,7 +38,6 @@
     --bg-hover: #baabd5;
     --bg-dark: #0f0f0f;
     --bg-secondary: #dfecf1;
-    --bg-ambient: rgba(255, 255, 255, 0.318);
     --heading-color: #292922; */
     /* --border-color: rgb(204, 204, 204); */
     --ambient-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -44,11 +48,13 @@
     --secondary: #494b64;
     --light: #1d2429;
     --lighter: #242c30;
-    --dark: #fff;
+    --dark: #e9f7f7;
+    /* --dark: #d5d5d5; */
     --darker: #f9f9f9;
     --font: 'Outfit', sans-serif;
-    --faded: #c1b9b9;
+    --faded: #999;
     --border: rgba(255, 255, 255, 0.4);
+    --bg-ambient: #0f0f0f69;
     /* --font-dark: #e1e1ff;
     --font-light: #2f2f2f;
     --font-faded: #c1b9b9;
@@ -60,7 +66,6 @@
     --bg-hover: #34296e83;
     --bg-dark: #fff;
     --bg-secondary: #121212;
-    --bg-ambient: #0f0f0f69;
     --heading-color: #fff; */
     --path: #fff;
     --bg-faded: #18181a;

@@ -34,21 +34,27 @@ a {
     display: none;
 }
 
-.head-container {
-    background: #6e50fd;
-}
+/* .head-container {
+    background: #5d74bb;
+} */
 
 .head-container {
     display: flex;
     align-items: center;
+    justify-content: start;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    grid-gap: 1rem;
 }
 
 .btn {
     white-space: nowrap;
     padding: 8px 16px;
     border-radius: 10px;
-    margin: 0 5px;
     border: 2px solid var(--border);
     transition: 0.3s ease;
     font-family: Outfit;
@@ -59,8 +65,7 @@ a {
 }
 
 .btn-primary {
-    color: #6e50fd;
-    background: var(--primary);
+    background: transparent;
 }
 
 .btn-submit {
@@ -72,11 +77,7 @@ a {
 }
 
 .btn:hover {
-    background: rgb(255, 255, 255, 0.1);
-}
-
-.btn-primary:hover {
-    background: rgb(255, 255, 255, 0.9);
+    background: #ffffff1a;
 }
 
 .btn:focus {
@@ -86,7 +87,7 @@ a {
 header {
     height: 75px;
     width: 100%;
-    color: #fff;
+    color: var(--light-const);
     padding: 0 1rem;
     display: flex;
     align-items: center;
@@ -94,7 +95,7 @@ header {
     z-index: 1;
     top: 0;
     user-select: none;
-    background: #6e50fd;
+    background: var(--primary);
 }
 
 .header-animation {
@@ -122,7 +123,7 @@ header {
     background: var(--bg-ambient);
     box-shadow: var(--ambient-box-shadow);
     color: var(--dark);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(300px);
     padding: 2rem;
     border-radius: 50px;
     margin-top: 1rem;
@@ -189,7 +190,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     background: #1b1b1b;
-    color: #fff;
+    color: var(--light-const);
     /* padding: 5px 0; */
     border-radius: 0 0 10px 10px;
     width: 100%;
@@ -219,20 +220,25 @@ header {
 }
 
 .header .btn-primary {
-    background: #fff;
+    background: var(--light-const);
     color: var(--primary);
-    border: #fff;
+    border: var(--light-const);
+}
+
+.header-scroll .btn {
+    color: var(--dark);
+    border-color: var(--dark);
 }
 
 .header-scroll .btn-primary {
-    color: #fff !important;
-    background: var(--primary);
-    border: var(--primary);
+    color: var(--light);
+    background: var(--dark);
+    border: var(--dark);
 }
 
-.header-scroll .btn-primary:hover {
+/* .header-scroll .btn-primary:hover {
     background: #6e50fde6;
-}
+} */
 
 .header .header-menu-open {
     width: 36px;
@@ -245,7 +251,7 @@ header {
     margin-right: 16px;
     background: transparent;
     border: none;
-    color: #fff;
+    color: var(--light-const);
     font-size: 20px;
 }
 
@@ -368,8 +374,12 @@ header {
 }
 
 .header-side .register {
-    background: #6e50fd;
-    color: #fff !important;
+    background: var(--primary);
+    color: var(--light-const) !important;
+}
+
+path {
+    fill: var(--primary);
 }
 
 /* Banner */
@@ -378,8 +388,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #6e50fd;
-    color: #fff;
+    background: var(--primary);
+    color: var(--light-const);
     padding: 25px;
 }
 
@@ -395,6 +405,13 @@ header {
 .banner-top .textarea,
 .banner-top .avatar {
     margin: 16px;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    grid-gap: 0.5rem;
 }
 
 .banner-top h1,
@@ -425,36 +442,14 @@ header {
     font-weight: 500;
 }
 
-.banner-top .banner-btns {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.banner-top .banner-btns a {
-    background: #6e50fd;
-    color: #1b1b1b;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 30px;
-    margin: 5px;
-    border: 2px solid #fff;
-    color: #fff;
-    transition: 0.3s ease;
-}
-
-.banner-top .banner-btns a:hover {
-    border-radius: 10px;
-}
-
-.banner-top .hire-btn {
-    border: 2px solid #6e50fd !important;
-    background: #fff !important;
-    color: #6e50fd !important;
+.banner-top .btn-primary {
+    background: var(--light-const);
+    color: var(--primary);
 }
 
 .banner-top .avatar-img {
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 5px solid var(--light-const);
     width: 200px;
 }
 

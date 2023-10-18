@@ -34,11 +34,11 @@ function Banner({ abouts }: Props) {
                   </span>
                 </h4>
                 <p className="text-4">{about.tagline}</p>
-                <div className="banner-btns">
-                  <Link to="/skills" className="hire-btn">
+                <div className="btns">
+                  <Link to="/skills" className="btn btn-primary">
                     Hire Me
                   </Link>
-                  <a href="#" className="explore-btn">
+                  <a href="#" className="btn">
                     Explore!
                   </a>
                 </div>
@@ -55,7 +55,7 @@ function Banner({ abouts }: Props) {
           <div className="banner-bottom">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
-                fill="#6e50fd"
+                // fill="#5d74bb"
                 fillOpacity="1"
                 d="M0,224L48,229.3C96,235,192,245,288,234.7C384,224,480,192,576,154.7C672,117,768,75,864,64C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
               ></path>
