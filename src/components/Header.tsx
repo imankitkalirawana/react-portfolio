@@ -55,15 +55,15 @@ function Header() {
         <header id="header-scroll" className={scrollClass}>
           <div className="header">
             <div className="header-left">
-              <div className="header-logo">
+              <Link to="/#" className="header-logo">
                 <i className="fa-duotone fa-code"></i>
                 <div className="brand-text">
                   <span className="text-1">Divinely</span>
-                  <span className="text-2">Developers</span>
+                  <span className="text-2">Developer</span>
                 </div>
-              </div>
+              </Link>
               <ul className="header-menu hide-header">
-                <Link to="/">
+                <Link to="/#">
                   <li className="menu-item">
                     <a>Home</a>
                   </li>
@@ -83,7 +83,7 @@ function Header() {
                     <a>Contact</a>
                   </li>
                 </Link>
-                <li className="menu-item">
+                <li className="menu-item menu-theme">
                   <span>Theme</span>
                   <div className="theme-dropdown">
                     <span
@@ -111,11 +111,11 @@ function Header() {
               </ul>
             </div>
             <div className="header-right">
-              <div className="login-register hide-header">
-                <a href="#" className="login">
+              <div className="btns hide-header">
+                <a href="#" className="btn">
                   Login
                 </a>
-                <a href="#" className="register">
+                <a href="#" className="btn btn-primary">
                   Create an account
                 </a>
               </div>
@@ -166,7 +166,7 @@ function Header() {
             <li className="menu-item">
               <a href="#">Contact</a>
             </li>
-            <li className="menu-item">
+            <li className="menu-item menu-theme">
               <a>
                 <label
                   className="theme-switch head_dropdown_item"
@@ -193,11 +193,11 @@ function Header() {
           </ul>
         </div>
 
-        <div className="header-side-bottom">
-          <a href="#" className="login">
+        <div className="header-side-bottom btns">
+          <a href="#" className="btn btn-primary">
             Login
           </a>
-          <a href="#" className="register">
+          <a href="#" className="btn btn-primary">
             Create an account
           </a>
         </div>

@@ -1,7 +1,7 @@
 import AvatarImg from "/imankitkalirawana.jpg";
 function About() {
   return (
-    <div className="about" id="about">
+    <div className="section about" id="about">
       <div className="about-up">
         {/* <img className="about-img" src="/assets/imankitkalirawana.jpg" alt="Bhuneshvar"> */}
         <img className="about-img" src={AvatarImg} alt="" />

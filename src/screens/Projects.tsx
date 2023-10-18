@@ -16,15 +16,21 @@ type ProjectsProps = {
 
 function Project({ projects }: ProjectsProps) {
   const projectDir = "/projects";
-  const displayProjects = projects.slice(0, 3);
 
   return (
     <div className="section projects" id="projects">
+      <Link
+        to="/"
+        className="btn view-more-btn"
+        style={{ borderColor: "transparent", alignSelf: "flex-start" }}
+      >
+        <i className="fa-solid fa-arrow-left"></i>
+      </Link>
       <div className="section-header">
         <h2 className="topic-heading projects-heading">Projects</h2>
       </div>
       <div className="items">
-        {displayProjects.map((project) => (
+        {projects.map((project) => (
           <div className="item" key={project.id}>
             <a href={project.previewLink} className="image-btn" target="_blank">
               <ImageGallery
@@ -48,9 +54,6 @@ function Project({ projects }: ProjectsProps) {
           </div>
         ))}
       </div>
-      <Link to="/projects" className="btn view-more-btn">
-        View More
-      </Link>
     </div>
   );
 }

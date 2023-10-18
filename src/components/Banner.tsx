@@ -34,7 +34,7 @@ function Banner() {
               </p>
 
               <div className="banner-btns">
-                <Link to="/app" className="hire-btn">
+                <Link to="/skills" className="hire-btn">
                   Hire Me
                 </Link>
                 <a href="#" className="explore-btn">

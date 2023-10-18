@@ -1,3 +1,11 @@
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
@@ -6,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Quicksand;
+    font-family: Outfit;
     box-sizing: border-box;
     background: var(--bg-light);
     color: var(--font-dark);
@@ -34,6 +42,36 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn {
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin: 0 5px;
+    border: 2px solid var(--border-color);
+    transition: 0.3s ease;
+    font-family: Outfit;
+    color: var(--font-dark);
+    background: transparent;
+    font-size: 16px;
+}
+
+.btn-primary {
+    color: #6e50fd;
+    background: #fff;
+}
+
+.view-more-btn {
+    align-self: center;
+}
+
+.btn:hover {
+    background: rgb(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    background: rgb(255, 255, 255, 0.9);
 }
 
 header {
@@ -75,9 +113,8 @@ header {
     background: var(--bg-ambient);
     box-shadow: var(--ambient-box-shadow);
     color: var(--font-dark);
-    /* background: #6d50fd5a; */
     backdrop-filter: blur(30px);
-    padding: 1rem 2rem;
+    padding: 2rem;
     border-radius: 50px;
     margin-top: 1rem;
     transition: 0.3s;
@@ -106,6 +143,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    margin-left: 1rem;
 }
 
 .header .header-left,
@@ -116,10 +154,12 @@ header {
 
 .header .menu-item {
     padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 600;
     border-radius: 20px;
     transition: 0.3s ease;
+}
+
+.menu-theme {
+    position: relative;
 }
 
 .header .header-menu li:hover {
@@ -127,7 +167,7 @@ header {
     border-radius: 10px;
 }
 
-.header .header-menu li:nth-child(5):hover {
+.header .header-menu .menu-theme:hover {
     background: #34296e83;
     border-radius: 10px 10px 0 0;
 }
@@ -143,7 +183,7 @@ header {
     color: #fff;
     /* padding: 5px 0; */
     border-radius: 0 0 10px 10px;
-    width: 85.5px;
+    width: 100%;
     overflow: hidden;
     height: 0px;
     transition: 0.3s ease;
@@ -157,45 +197,26 @@ header {
     background: #34296e83;
 }
 
-.header .header-menu li:nth-child(5):hover .theme-dropdown {
-    height: 51px;
+.header .header-menu .menu-theme:hover .theme-dropdown {
+    height: 56px;
 }
 
 .header .menu-item a {
     position: relative;
 }
 
-.header .login-register {
+.header .btns {
     display: flex;
 }
 
-.header .login-register a {
-    white-space: nowrap;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    margin: 0 5px;
-    border: 2px solid #fff;
-    transition: 0.3s ease;
-    font-weight: 500;
-}
-
-.header-scroll .login-register a {
-    border: 2px solid #6e50fd;
-    color: #6e50fd;
-}
-
-.header .login-register a:hover {
-    border-radius: 10px;
-}
-
-.header .register {
+.header-scroll .btn-primary {
     color: #fff !important;
     background: #6e50fd;
+    border-color: #6e50fd;
 }
 
-.header-scroll .register {
-    border-color: #6e50fd !important;
+.header-scroll .btn-primary:hover {
+    background: rgb(110, 80, 253, 0.9);
 }
 
 .header .header-menu-open {
@@ -385,7 +406,7 @@ header {
 }
 
 .banner-top .text-4 {
-    font-size: 14px;
+
     font-weight: 500;
 }
 
@@ -422,11 +443,12 @@ header {
     width: 200px;
 }
 
-.specilize,
-.skills,
-.about,
-.contact {
+.section {
     padding: 0 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Specilize */
@@ -443,7 +465,6 @@ header {
     position: absolute;
     color: var(--primary-color);
     font-size: 10px;
-    font-family: montserrat;
     font-weight: bold;
     left: 50%;
     transform: translate(-50%) translateY(-15px);
@@ -482,7 +503,6 @@ header {
     width: 30%;
     min-width: 300px;
     max-width: 300px;
-    cursor: pointer;
     user-select: none;
 }
 
@@ -513,14 +533,13 @@ header {
 }
 
 .specilize-card h4 {
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
     margin: 5px 0;
 }
 
 .specilize-card p {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--font-faded);
 }
 
@@ -532,7 +551,8 @@ header {
 
 .topic-heading {
     text-align: center;
-    font-family: montserrat;
+    font-family: Montserrat;
+    font-style: italic;
 }
 
 .skills-content {
@@ -548,8 +568,8 @@ header {
 }
 
 .skills-card-left {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -583,9 +603,7 @@ header {
 }
 
 .skills-card-left .percentage {
-    font-size: 14px;
     font-weight: 700;
-    font-family: montserrat;
 }
 
 .fa-html5 {
@@ -672,7 +690,6 @@ header {
 .education-card::before {
     color: var(--primary-color);
     font-weight: 700;
-    font-family: Montserrat;
     text-transform: uppercase;
     font-size: 12px;
     font-style: italic;
@@ -689,7 +706,7 @@ header {
 }
 
 .education-pre h3 {
-    font-size: 14px;
+    font-weight: 500;
     margin: 0px;
 }
 
@@ -728,17 +745,13 @@ header {
 }
 
 .about-pitch {
-    max-width: 300px;
-    font-size: 14px;
-    font-weight: 600;
+    max-width: 356px;
 }
 
 .about-name {
     margin: 0;
     color: var(--primary-color);
     font-size: 12px;
-    font-family: Montserrat;
-    font-weight: 600;
 }
 
 .about-name::before {
@@ -786,8 +799,6 @@ header {
 .contact-left-down {
     color: var(--primary-color);
     font-weight: 600;
-    font-family: Montserrat;
-    font-size: 14px;
     font-style: italic;
     white-space: nowrap;
     display: flex;
@@ -822,7 +833,7 @@ header {
     margin: 5px 0;
     font-family: Quicksand;
     font-weight: 600;
-    font-size: 14px;
+
 }
 
 ::placeholder {

@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../components/Banner";
 import Specilize from "../components/Specilize";
 import Projects from "../components/Projects";
@@ -12,7 +11,7 @@ function HomeScreen() {
     <>
       <Banner />
       <Specilize services={Services.services} />
-      <Projects />
+      <Projects projects={Services.projects} />
       <Skills />
       <About />
       <Contact />

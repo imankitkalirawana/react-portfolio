@@ -73,6 +73,56 @@ const Services = {
       ],
     },
   ],
+  projects: [
+    {
+      id: "1",
+      title: "Links",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      technologies: "HTML, CSS, JS",
+      link: "https://github.com",
+      previewLink: "https://github.com",
+      images: ["links-1.png"],
+    },
+    {
+      id: "2",
+      title: "Blog Website",
+      // images: "blog-homepage-1.png",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      technologies: "HTML, CSS, JS",
+      link: "https://github.com",
+      previewLink: "https://github.com",
+      images: ["blog-homepage.png", "blog-page.png"],
+    },
+    {
+      id: "3",
+      title: "School Management System",
+      // images: "school-management-system-1.png",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      technologies: "HTML, CSS, JS, PHP, SQL",
+      link: "https://github.com",
+      previewLink: "https://github.com",
+      images: [
+        "school-management-system-1.png",
+        "school-management-system-2.png",
+        "school-management-system-3.png",
+        "school-management-system-4.png",
+      ],
+    },
+    {
+      id: "4",
+      title: "Div Calculator",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      technologies: "HTML, CSS, JS",
+      link: "https://github.com",
+      previewLink: "https://github.com",
+      images: [
+        "div-calculator-1.png",
+        "div-calculator-2.png",
+        "div-calculator-3.png",
+        "div-calculator-4.png",
+      ],
+    },
+  ],
 };
 
 export default Services;
