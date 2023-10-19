@@ -8,7 +8,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 150px;
+    scroll-padding-top: 155px;
 }
 
 body {
@@ -84,12 +84,24 @@ a {
     align-self: center;
 }
 
+.btn-back {
+    margin-right: 0.5rem;
+    border-color: transparent;
+    align-self: flex-start;
+}
+
+
+
 .btn:hover {
     background: #ffffff1a;
 }
 
 .btn:focus {
     outline: 2px solid var(--primary);
+}
+
+.btn-back:focus {
+    outline: none;
 }
 
 header {
@@ -121,7 +133,7 @@ header {
 
 .header-scroll {
     position: fixed;
-    width: 95%;
+    width: 100%;
     background: transparent;
     transform: translateY(0%);
     transition: 0.3s ease;
@@ -263,7 +275,6 @@ footer .btn-primary {
     justify-content: center;
     border-radius: 50%;
     display: none;
-    margin-right: 16px;
     background: transparent;
     border: none;
     color: var(--light-const);
@@ -842,7 +853,7 @@ input:focus {
     }
 }
 
-@media (max-width: 832px) {
+@media (max-width: 942px) {
     .hide-header {
         display: none !important;
     }
@@ -850,12 +861,18 @@ input:focus {
     .header-menu-open {
         display: flex !important;
     }
+
+    .header-scroll .header {
+        padding: 1rem 2rem;
+    }
 }
 
 @media (max-width: 668px) {
     .banner-1 {
         flex-direction: column;
     }
+
+
 }
 
 @media (max-width: 578px) {
