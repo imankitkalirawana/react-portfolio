@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import "../css/Header.css";
 
 function Header() {
   const [scrollClass, setScrollClass] = useState("");
@@ -56,22 +57,22 @@ function Header() {
               <ul className="header-menu hide-header">
                 <Link to="/#">
                   <li className="menu-item">
-                    <a>Home</a>
+                    <p>Home</p>
                   </li>
                 </Link>
                 <Link to="#skills">
                   <li className="menu-item">
-                    <a>Skills</a>
+                    <p>Skills</p>
                   </li>
                 </Link>
                 <Link to="#about">
                   <li className="menu-item">
-                    <a>About</a>
+                    <p>About</p>
                   </li>
                 </Link>
                 <Link to="#contact">
                   <li className="menu-item">
-                    <a>Contact</a>
+                    <p>Contact</p>
                   </li>
                 </Link>
                 <li className="menu-item menu-theme">

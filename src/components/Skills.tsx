@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type Props = {
   skills: {
     id: number;
@@ -77,6 +79,9 @@ function Skills({ skills, educations, certifications }: Props) {
           </div>
         </div>
       </div>
+      <Link to="/skills" className="btn view-more-btn">
+        View More
+      </Link>
     </div>
   );
 }

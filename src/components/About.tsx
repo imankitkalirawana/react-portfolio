@@ -13,7 +13,7 @@ function About({ abouts }: Props) {
   return (
     <>
       {abouts.map((about) => (
-        <div className="section about" id="about">
+        <div className="section about" id="about" key={about.id}>
           <div className="about-up">
             <img className="about-img" src={about.image} alt="" />
             <p className="about-pitch">

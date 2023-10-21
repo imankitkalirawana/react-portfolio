@@ -95,7 +95,7 @@ function Footer({ links }: Props) {
               <span className="footer-nav-menu-heading">Social</span>
               <ul className="footer-nav-menu-level-2">
                 {links.slice(0, 5).map((link) => (
-                  <li className="footer-nav-item-level-2">
+                  <li className="footer-nav-item-level-2" key={link.id}>
                     <a href={link.link} target="_blank">
                       {link.title}
                     </a>
@@ -128,7 +128,7 @@ function Footer({ links }: Props) {
           </ul>
           <ul className="footer-bottom-menu">
             {links.slice(0, 4).map((link) => (
-              <li className="footer-bottom-item">
+              <li className="footer-bottom-item" key={link.id}>
                 <a href={link.link} target="_blank">
                   <i className={link.icon}></i>
                 </a>

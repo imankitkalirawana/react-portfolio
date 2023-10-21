@@ -26,7 +26,7 @@
     --light-const: #e9eef1;
     --dark-const: #1d2429;
     --bg-ambient: rgba(255, 255, 255, 0.318);
-
+    --blur: blur(300px);
     /* --font-dark: #2f2f2f;
     --font-light: #fff;
     --font-faded: #2c3f50;
@@ -57,6 +57,7 @@
     --faded: #999;
     --border: rgba(255, 255, 255, 0.4);
     --bg-ambient: #0f0f0f69;
+    --blur: blur(50px);
     /* --font-dark: #e1e1ff;
     --font-light: #2f2f2f;
     --font-faded: #c1b9b9;

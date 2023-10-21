@@ -17,7 +17,7 @@ function Banner({ abouts }: Props) {
   return (
     <>
       {abouts.map((about) => (
-        <div className="banner">
+        <div className="banner" key={about.id}>
           <div className="banner-top">
             <div className="banner-1">
               <div className="textarea">
