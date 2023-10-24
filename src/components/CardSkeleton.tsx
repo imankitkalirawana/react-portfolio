@@ -1,3 +1,4 @@
+import React from "react";
 import Skeleton from "react-loading-skeleton";
 import "../css/CardSkeleton.css";
 
@@ -6,7 +7,7 @@ type Props = {
 };
 
 const CardSkeleton: React.FC<Props> = ({ cards }) => {
-  return Array(cards)
+  const cardSkeletonElements = Array(cards)
     .fill(0)
     .map((item, index) => (
       <div className="card-skeleton" key={index}>
@@ -23,6 +24,8 @@ const CardSkeleton: React.FC<Props> = ({ cards }) => {
         </div>
       </div>
     ));
+
+  return <>{cardSkeletonElements}</>;
 };
 
 export default CardSkeleton;
