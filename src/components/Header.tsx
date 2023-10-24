@@ -67,18 +67,27 @@ function Header() {
                 </div>
               </Link>
               <ul className="header-menu hide-header">
-                <Link to="/#" className="menu-item">
-                  <p>Home</p>
+                <Link to="/#">
+                  <li className="menu-item">
+                    <p>Home</p>
+                  </li>
                 </Link>
-                <Link to="#skills" className="menu-item">
-                  <p>Skills</p>
+                <Link to="#skills">
+                  <li className="menu-item">
+                    <p>Skills</p>
+                  </li>
                 </Link>
-                <Link to="#about" className="menu-item">
-                  <p>About</p>
+                <Link to="#about">
+                  <li className="menu-item">
+                    <p>About</p>
+                  </li>
                 </Link>
-                <Link to="#contact" className="menu-item">
-                  <p>Contact</p>
+                <Link to="#contact">
+                  <li className="menu-item">
+                    <p>Contact</p>
+                  </li>
                 </Link>
+
                 <li className="menu-item menu-theme">
                   Theme
                   <div className="theme-dropdown">
@@ -170,7 +179,6 @@ function Header() {
                 checked={theme === "dark"}
                 onClick={toggleTheme}
               />
-
               <label htmlFor="switch">Toggle</label>
             </div>
             <span>Dark</span>
