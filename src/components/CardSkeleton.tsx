@@ -5,7 +5,7 @@ type Props = {
   cards: number;
 };
 
-function CardSkeleton({ cards }: Props) {
+const CardSkeleton: React.FC<Props> = ({ cards }) => {
   return Array(cards)
     .fill(0)
     .map((item, index) => (
@@ -23,6 +23,6 @@ function CardSkeleton({ cards }: Props) {
         </div>
       </div>
     ));
-}
+};
 
 export default CardSkeleton;
