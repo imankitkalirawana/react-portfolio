@@ -49,7 +49,7 @@ function Skills({ certifications }: Props) {
           />
         </div>
         <div className="items">
-          {isLoading && <CardSkeleton cards={6} />}
+          {/* {isLoading && <CardSkeleton cards={6} />} */}
           {displayCertificates
             .filter((certificate) =>
               certificate.title
