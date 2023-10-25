@@ -18,8 +18,8 @@ function Footer({ links }: Props) {
       <motion.div
         initial={{ opacity: 0, y: 150 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
-        transition={{ duration: 0.8 }}
-        className="footer-top"
+        transition={{ duration: 0 }}
+        className="footer-top animation-transition"
       >
         <h2 className="footer-main-heading align-center">
           Welcome to imankitkalirawana

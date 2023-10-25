@@ -47,8 +47,8 @@ function Skills({ skills, educations, certifications }: Props) {
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
               }
-              transition={{ duration: 0.8 }}
-              className="skills-card-left"
+              transition={{ duration: 0 }}
+              className="skills-card-left animation-transition"
               style={{ background: skill.background }}
               key={skill.id}
             >
@@ -71,8 +71,8 @@ function Skills({ skills, educations, certifications }: Props) {
           <motion.div
             initial={{ opacity: 0, x: 120 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 120 }}
-            transition={{ duration: 0.8 }}
-            className="education-card education-crd"
+            transition={{ duration: 0 }}
+            className="education-card education-crd animation-transition"
           >
             {displayEducation.map((education) => (
               <div className="education-pre" key={education.id}>
@@ -86,8 +86,8 @@ function Skills({ skills, educations, certifications }: Props) {
           <motion.div
             initial={{ opacity: 0, x: 120 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 120 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="education-card certificate-crd"
+            transition={{ duration: 0, delay: 0.3 }}
+            className="education-card certificate-crd animation-transition"
           >
             {displayCertification.map((certification) => (
               <div className="education-pre" key={certification.id}>

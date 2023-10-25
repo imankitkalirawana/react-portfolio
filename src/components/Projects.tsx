@@ -24,17 +24,17 @@ function Project({ projects }: ProjectsProps) {
     {
       initial: { opacity: 0, x: -120 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
     {
       initial: { opacity: 0, y: 120 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
     {
       initial: { opacity: 0, x: 120 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
   ];
 
@@ -49,7 +49,7 @@ function Project({ projects }: ProjectsProps) {
             initial={itemAnimations[index].initial}
             animate={isInView ? itemAnimations[index].animate : {}}
             transition={itemAnimations[index].transition}
-            className="item"
+            className="item animation-transition"
             key={project.id}
           >
             <a href={project.previewLink} className="image-btn" target="_blank">

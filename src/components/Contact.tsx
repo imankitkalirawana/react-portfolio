@@ -21,8 +21,8 @@ function Contact({ contact }: Props) {
           <motion.div
             initial={{ opacity: 0, x: -150 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
-            transition={{ duration: 0.8 }}
-            className="contact-left"
+            transition={{ duration: 0 }}
+            className="contact-left animation-transition"
           >
             <div className="contact-left-up">
               <h3>Got a project? Let's Talk</h3>
@@ -44,14 +44,14 @@ function Contact({ contact }: Props) {
           <motion.div
             initial={{ opacity: 0, y: 150 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
-            transition={{ duration: 0.8 }}
-            className="skills-divider"
+            transition={{ duration: 0 }}
+            className="skills-divider animation-transition"
           ></motion.div>
           <motion.div
             initial={{ opacity: 0, x: 150 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
-            transition={{ duration: 0.8 }}
-            className="contact-right"
+            transition={{ duration: 0 }}
+            className="contact-right animation-transition"
           >
             <div className="contact-left-up">
               <h3>Estimate your project? Let me know here</h3>

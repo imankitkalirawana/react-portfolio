@@ -24,8 +24,8 @@ function About({ abouts }: Props) {
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
               }
-              transition={{ duration: 0.8 }}
-              className="about-img"
+              transition={{ duration: 0 }}
+              className="about-img animation-transition"
               src={about.image}
               alt=""
             />
@@ -34,8 +34,8 @@ function About({ abouts }: Props) {
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
               }
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="about-pitch"
+              transition={{ duration: 0, delay: 0.2 }}
+              className="about-pitch animation-transition"
             >
               <i>" {about.quote}"</i>
             </motion.p>
@@ -44,8 +44,8 @@ function About({ abouts }: Props) {
               animate={
                 isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
               }
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="about-name"
+              transition={{ duration: 0, delay: 0.4 }}
+              className="about-name animation-transition"
             >
               {about.name}
             </motion.h4>

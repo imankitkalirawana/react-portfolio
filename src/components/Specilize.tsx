@@ -19,17 +19,17 @@ function Specilize({ services }: SpecializeProps) {
     {
       initial: { opacity: 0, x: -120 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
     {
       initial: { opacity: 0, y: 120 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
     {
       initial: { opacity: 0, x: 120 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration: 0.8 },
+      transition: { duration: 0 },
     },
   ];
   return (
@@ -42,7 +42,7 @@ function Specilize({ services }: SpecializeProps) {
             initial={itemAnimations[index].initial}
             animate={isInView ? itemAnimations[index].animate : {}}
             transition={itemAnimations[index].transition}
-            className="specilize-card"
+            className="specilize-card animation-transition"
             key={service.id}
           >
             <i
