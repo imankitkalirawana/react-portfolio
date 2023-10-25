@@ -41,8 +41,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="text-1"
+                  transition={{ duration: 0 }}
+                  className="text-1 animation-transition"
                 >
                   Hello, I'm
                 </motion.h2>
@@ -53,8 +53,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="text-2"
+                  transition={{ duration: 0 }}
+                  className="text-2 animation-transition"
                 >
                   {about.name}
                 </motion.h1>
@@ -65,8 +65,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="text-3"
+                  transition={{ duration: 0 }}
+                  className="text-3 animation-transition"
                 >
                   I'm a{" "}
                   <span className="typing">
@@ -85,8 +85,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="text-4"
+                  transition={{ duration: 0 }}
+                  className="text-4 animation-transition"
                 >
                   {about.tagline}
                 </motion.p>
@@ -97,8 +97,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="btns"
+                  transition={{ duration: 0 }}
+                  className="btns animation-transition"
                 >
                   <Popup
                     trigger={
@@ -180,8 +180,8 @@ function Banner({ abouts }: Props) {
                   }}
                   initial="hidden"
                   animate={mainControls}
-                  transition={{ duration: 0.8 }}
-                  className="avatar-img"
+                  transition={{ duration: 0 }}
+                  className="avatar-img animation-transition"
                   src={about.image}
                   alt={about.name}
                 />

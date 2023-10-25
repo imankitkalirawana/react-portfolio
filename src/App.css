@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+.animation-transition {
+  transition: 0.8s all;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -575,10 +579,15 @@ footer {
   grid-gap: 1rem;
 }
 
+.footer-top .btns {
+  flex-direction: column;
+}
+
 .footer-main-heading {
   margin-top: 30px;
   color: var(--light-const);
   font-size: 25px;
+  text-align: center;
 }
 
 .footer-middle {
