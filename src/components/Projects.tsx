@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../css/Project.scss";
 import ImageGallery from "react-image-gallery";
+import { motion } from "framer-motion";
+import { useInView } from "react-hook-inview";
 
 type ProjectsProps = {
   projects: {
@@ -17,15 +19,39 @@ type ProjectsProps = {
 function Project({ projects }: ProjectsProps) {
   const projectDir = "/projects";
   const displayProjects = projects.slice(0, 3);
+  const [ref, isInView] = useInView();
+  const itemAnimations = [
+    {
+      initial: { opacity: 0, x: -120 },
+      animate: { opacity: 1, x: 0 },
+      transition: { duration: 0.8 },
+    },
+    {
+      initial: { opacity: 0, y: 120 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.8 },
+    },
+    {
+      initial: { opacity: 0, x: 120 },
+      animate: { opacity: 1, x: 0 },
+      transition: { duration: 0.8 },
+    },
+  ];
 
   return (
-    <div className="section projects" id="projects">
+    <div ref={ref} className="section projects" id="projects">
       <div className="section-header">
         <h2 className="topic-heading projects-heading">Projects</h2>
       </div>
       <div className="items">
-        {displayProjects.map((project) => (
-          <div className="item" key={project.id}>
+        {displayProjects.map((project, index) => (
+          <motion.div
+            initial={itemAnimations[index].initial}
+            animate={isInView ? itemAnimations[index].animate : {}}
+            transition={itemAnimations[index].transition}
+            className="item"
+            key={project.id}
+          >
             <a href={project.previewLink} className="image-btn" target="_blank">
               <ImageGallery
                 items={project.images.map((image) => ({
@@ -45,7 +71,7 @@ function Project({ projects }: ProjectsProps) {
             <a className="item-link" href={project.link} target="_blank">
               <i className="fa-duotone fa-code-compare"></i>
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
       <Link to="/projects" className="btn view-more-btn">

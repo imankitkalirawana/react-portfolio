@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-hook-inview";
+
 type Props = {
   contact: {
     id: number;
@@ -8,13 +11,19 @@ type Props = {
 };
 
 function Contact({ contact }: Props) {
+  const [ref, isInView] = useInView();
   const displayContact = contact[0];
   return (
     <>
-      <div className="section contact" id="contact">
+      <div ref={ref} className="section contact" id="contact">
         <h2 className="topic-heading contact-heading">Stay Connected</h2>
         <div className="contact-pre">
-          <div className="contact-left">
+          <motion.div
+            initial={{ opacity: 0, x: -150 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
+            transition={{ duration: 0.8 }}
+            className="contact-left"
+          >
             <div className="contact-left-up">
               <h3>Got a project? Let's Talk</h3>
               <p>
@@ -25,12 +34,25 @@ function Contact({ contact }: Props) {
               href={`mailto:${displayContact.email}`}
               className="contact-left-down"
             >
-              <p>{displayContact.email}</p>
-              <i className="fa-solid fa-arrow-right"></i>
+              <p>
+                {displayContact.email}
+                {"  "}
+                <i className="fa-solid fa-arrow-right"></i>
+              </p>
             </a>
-          </div>
-          <div className="skills-divider"></div>
-          <div className="contact-right">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 150 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
+            transition={{ duration: 0.8 }}
+            className="skills-divider"
+          ></motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 150 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
+            transition={{ duration: 0.8 }}
+            className="contact-right"
+          >
             <div className="contact-left-up">
               <h3>Estimate your project? Let me know here</h3>
               <form
@@ -85,7 +107,7 @@ function Contact({ contact }: Props) {
                 <input type="hidden" name="_template" value="box" />
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

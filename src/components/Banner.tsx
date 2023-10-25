@@ -1,5 +1,7 @@
 import ReactTyped from "react-typed";
 import Popup from "reactjs-popup";
+import { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 type Props = {
   abouts: {
@@ -14,16 +16,58 @@ type Props = {
 function Banner({ abouts }: Props) {
   const typingText = abouts[0].professions;
 
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <>
       {abouts.map((about) => (
-        <div className="banner" key={about.id}>
+        <div className="banner" ref={ref} key={about.id}>
           <div className="banner-top">
             <div className="banner-1">
               <div className="textarea">
-                <h2 className="text-1">Hello, I'm</h2>
-                <h1 className="text-2">{about.name}</h1>
-                <h4 className="text-3">
+                <motion.h2
+                  variants={{
+                    hidden: { opacity: 0, x: -75 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
+                  className="text-1"
+                >
+                  Hello, I'm
+                </motion.h2>
+                <motion.h1
+                  variants={{
+                    hidden: { opacity: 0, x: -150 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
+                  className="text-2"
+                >
+                  {about.name}
+                </motion.h1>
+                <motion.h4
+                  variants={{
+                    hidden: { opacity: 0, x: -225 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
+                  className="text-3"
+                >
                   I'm a{" "}
                   <span className="typing">
                     <ReactTyped
@@ -33,9 +77,29 @@ function Banner({ abouts }: Props) {
                       loop
                     />
                   </span>
-                </h4>
-                <p className="text-4">{about.tagline}</p>
-                <div className="btns">
+                </motion.h4>
+                <motion.p
+                  variants={{
+                    hidden: { opacity: 0, x: -300 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
+                  className="text-4"
+                >
+                  {about.tagline}
+                </motion.p>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, x: -375 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
+                  className="btns"
+                >
                   <Popup
                     trigger={
                       <button className="btn btn-primary">Hire Me</button>
@@ -106,10 +170,17 @@ function Banner({ abouts }: Props) {
                   <a href="#specilize" className="btn">
                     Explore!
                   </a>
-                </div>
+                </motion.div>
               </div>
               <div className="avatar">
-                <img
+                <motion.img
+                  variants={{
+                    hidden: { opacity: 0, x: 375 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  initial="hidden"
+                  animate={mainControls}
+                  transition={{ duration: 0.8 }}
                   className="avatar-img"
                   src={about.image}
                   alt={about.name}

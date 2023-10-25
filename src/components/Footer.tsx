@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-hook-inview";
+
 type Props = {
   links: {
     id: number;
@@ -8,10 +11,16 @@ type Props = {
 };
 
 function Footer({ links }: Props) {
+  const [ref, isInView] = useInView();
   const currYear = new Date().getFullYear();
   return (
-    <footer>
-      <div className="footer-top">
+    <footer ref={ref}>
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
+        transition={{ duration: 0.8 }}
+        className="footer-top"
+      >
         <h2 className="footer-main-heading align-center">
           Welcome to imankitkalirawana
         </h2>
@@ -23,7 +32,7 @@ function Footer({ links }: Props) {
             Login
           </a>
         </div>
-      </div>
+      </motion.div>
 
       <div className="footer-middle">
         <a href="/blogs" className="footer-logo">
