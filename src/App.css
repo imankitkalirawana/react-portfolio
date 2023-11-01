@@ -551,16 +551,16 @@ input:focus {
 
 @media (max-width: 668px) {
   .banner-1 {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .textarea .btns {
+    margin-top: 1rem;
   }
 }
 
 .blur {
   filter: blur(2px);
 }
-
-/* 
- */
 
 footer {
   position: relative;

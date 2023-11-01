@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { useDrag } from "react-use-gesture";
 import { HashLink as Link } from "react-router-hash-link";
 import "../css/Header.css";
 
@@ -7,7 +6,8 @@ function Header() {
   const [scrollClass, setScrollClass] = useState("");
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [sidebar, setSidebar] = useState("-100%");
-  const sidebarRef = useRef(null);
+  const [isSidebar, setIsSidebar] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +28,21 @@ function Header() {
 
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
-  const openSidebar = () => setSidebar("0%");
-  const closeSidebar = () => setSidebar("-100%");
-
+  const openSidebar = () => {
+    setIsSidebar(true);
+    setSidebar("0%");
+  };
+  const closeSidebar = () => {
+    setIsSidebar(false);
+    setSidebar("-100%");
+  };
   useEffect(() => {
-    const handleOutsideClick = (e: any) => {
-      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+    const handleOutsideClick = (e: MouseEvent) => {
+      // Specify the type as MouseEvent
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(e.target as Node)
+      ) {
         closeSidebar();
       }
     };
@@ -44,14 +53,6 @@ function Header() {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  const bind = useDrag(({ swipe, last }) => {
-    if (swipe[0] === 1 && last) {
-      openSidebar();
-    } else if (swipe[0] === -1 && last) {
-      closeSidebar();
-    }
-  });
 
   return (
     <>
@@ -124,9 +125,11 @@ function Header() {
                   Create an account
                 </a>
               </div>
-              <button className="header-menu-open" onClick={openSidebar}>
-                <i className="fa-duotone fa-bars-staggered"></i>
-              </button>
+              {!isSidebar && (
+                <button className="header-menu-open" onClick={openSidebar}>
+                  <i className="fa-duotone fa-bars-staggered"></i>
+                </button>
+              )}
             </div>
           </div>
         </header>
@@ -134,7 +137,6 @@ function Header() {
       <div
         className="sidebar"
         ref={sidebarRef}
-        {...bind()}
         style={{ transform: `translateX(${sidebar})` }}
       >
         <div className="sidebar-header">
