@@ -510,6 +510,7 @@ textarea {
   margin: 5px 0;
   font-family: Quicksand;
   font-weight: 600;
+  width: 100%;
 }
 
 ::placeholder {
@@ -736,6 +737,9 @@ footer a:active {
 }
 
 @media (max-width: 680px) {
+  body {
+    background-size: auto;
+  }
   .footer-nav-menu-level-1 {
     grid-template-columns: repeat(3, 1fr);
   }
