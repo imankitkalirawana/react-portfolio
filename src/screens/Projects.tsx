@@ -33,7 +33,7 @@ function Project({ projects }: ProjectsProps) {
     <SkeletonTheme baseColor="var(--lighter)" highlightColor="var(--faded)">
       <div className="section projects" id="projects">
         <div className="section-header">
-          <Link to="/" className="btn btn-back">
+          <Link to="/#projects" className="btn btn-back">
             <i className="fa-solid fa-arrow-left"></i>
           </Link>
           <input
