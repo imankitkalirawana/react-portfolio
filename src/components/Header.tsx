@@ -1,57 +1,57 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useDrag } from "react-use-gesture";
 import { HashLink as Link } from "react-router-hash-link";
 import "../css/Header.css";
 
 function Header() {
   const [scrollClass, setScrollClass] = useState("");
-
-  // !Header Effect
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [sidebar, setSidebar] = useState("-100%");
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
-    // Add an event listener to the window to track scroll position
     const handleScroll = () => {
-      if (window.scrollY > 200) {
-        // Add a class when scrolled more than 200 pixels
-        setScrollClass("header-scroll");
-      } else {
-        // Remove the class when scrolled less than or equal to 200 pixels
-        setScrollClass("");
-      }
+      setScrollClass(window.scrollY > 200 ? "header-scroll" : "");
     };
 
-    // Attach the event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // ! Dark theme
-
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
-  // !Sidebar
+  const openSidebar = () => setSidebar("0%");
+  const closeSidebar = () => setSidebar("-100%");
 
-  const [sidebar, setSidebar] = useState("-100%");
+  useEffect(() => {
+    const handleOutsideClick = (e: any) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        closeSidebar();
+      }
+    };
 
-  const openSidebar = () => {
-    setSidebar("0%");
-  };
+    document.addEventListener("mousedown", handleOutsideClick);
 
-  const closeSidebar = () => {
-    setSidebar("-100%");
-  };
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  const bind = useDrag(({ swipe, last }) => {
+    if (swipe[0] === 1 && last) {
+      openSidebar();
+    } else if (swipe[0] === -1 && last) {
+      closeSidebar();
+    }
+  });
 
   return (
     <>
@@ -131,7 +131,12 @@ function Header() {
           </div>
         </header>
       </div>
-      <div className="sidebar" style={{ transform: `translateX(${sidebar})` }}>
+      <div
+        className="sidebar"
+        ref={sidebarRef}
+        {...bind()}
+        style={{ transform: `translateX(${sidebar})` }}
+      >
         <div className="sidebar-header">
           <Link to="/#" className="sidebar-brand">
             <i className="fa-duotone fa-code"></i>

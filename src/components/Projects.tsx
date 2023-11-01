@@ -39,20 +39,24 @@ function Project({ projects }: ProjectsProps) {
   ];
 
   return (
-    <div ref={ref} className="section projects" id="projects">
+    <div ref={ref} className="projects home-projects" id="projects">
       <div className="section-header">
         <h2 className="topic-heading projects-heading">Projects</h2>
       </div>
-      <div className="items">
+      <div className="project-items">
         {displayProjects.map((project, index) => (
           <motion.div
             initial={itemAnimations[index].initial}
             animate={isInView ? itemAnimations[index].animate : {}}
             transition={itemAnimations[index].transition}
-            className="item animation-transition"
+            className="project-item animation-transition"
             key={project.id}
           >
-            <a href={project.previewLink} className="image-btn" target="_blank">
+            <a
+              href={project.previewLink}
+              className="project-image-btn"
+              target="_blank"
+            >
               <ImageGallery
                 items={project.images.map((image) => ({
                   original: projectDir + "/" + image,
@@ -64,13 +68,18 @@ function Project({ projects }: ProjectsProps) {
                 autoPlay
               />
             </a>
-            <div className="item-details">
-              <h3 className="item-heading">{project.title}</h3>
-              <p className="item-description">{project.technologies}</p>
+            <div className="project-item-details">
+              <h3 className="project-item-heading">{project.title}</h3>
+
+              <p className="project-item-description">{project.description}</p>
+              <p className="project-item-technologies">
+                {project.technologies.split(", ").map((technology, index) => (
+                  <span className="project-item-technology" key={index}>
+                    {technology}
+                  </span>
+                ))}
+              </p>
             </div>
-            <a className="item-link" href={project.link} target="_blank">
-              <i className="fa-duotone fa-code-compare"></i>
-            </a>
           </motion.div>
         ))}
       </div>
