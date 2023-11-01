@@ -19,7 +19,8 @@ body {
   background: var(--light);
   color: var(--dark);
   transition: 0.3s ease;
-  overflow-x: hidden;
+  background-image: url("/bg1.png");
+  background-size: cover;
 }
 
 li {
