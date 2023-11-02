@@ -117,17 +117,20 @@
   align-self: flex-start;
 }
 .item-heading {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
   max-width: calc(300px - 2rem);
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "JetBrains Mono";
 }
 .item-description {
   font-size: 12px;
   font-weight: 500;
   color: var(--faded);
+  font-family: "JetBrains Mono";
+  font-style: italic;
 }
 .item-link {
   position: absolute;
@@ -197,13 +200,23 @@
   margin: auto;
 }
 
+.react-tabs__tab {
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+  border-radius: 40px;
+}
+
 .react-tabs__tab--selected {
   outline: none;
   background: var(--primary);
   color: #fff;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
 }
+
+// .react-tabs__tab--selected {
+//   outline: none;
+//   border-bottom: 2px solid var(--primary);
+// }
 
 // Skills
 
