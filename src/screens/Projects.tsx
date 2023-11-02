@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css/Project.scss";
+import "../css/Screens.scss";
 import ImageGallery from "react-image-gallery";
 import { useState, useEffect } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";

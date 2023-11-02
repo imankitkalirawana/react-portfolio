@@ -5,10 +5,12 @@ import { useInView } from "react-hook-inview";
 type Props = {
   skills: {
     id: number;
+    title: string;
     percentage: number;
     image: string;
     color: string;
     background: string;
+    isFontAwesome: boolean;
   }[];
   educations: {
     id: number;
@@ -30,7 +32,7 @@ function Skills({ skills, educations, certifications }: Props) {
 
   const displaySkills = [...skills]
     .sort((a, b) => b.percentage - a.percentage)
-    .slice(0, 8);
+    .slice(0, 5);
   const displayEducation = educations.slice(0, 3);
   const displayCertification = [...certifications]
     .sort((a, b) => a.priority - b.priority)
@@ -42,28 +44,43 @@ function Skills({ skills, educations, certifications }: Props) {
       <div className="skills-content">
         <div className="skills-content-left">
           {displaySkills.map((skill) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={
-                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
-              }
-              transition={{ duration: 0 }}
-              className="skills-card-left animation-transition"
-              style={{ background: skill.background }}
-              key={skill.id}
-            >
-              <i className={skill.image} style={{ color: skill.color }}></i>
-              <div className="progress-bar">
-                <div
-                  className="progress-track"
-                  style={{
-                    width: `${skill.percentage}%`,
-                    background: skill.color,
-                  }}
-                ></div>
-              </div>
-              <div className="percentage">{skill.percentage}%</div>
-            </motion.div>
+            <>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.5 }
+                }
+                transition={{ duration: 0 }}
+                className="skills-card-left animation-transition"
+                style={{ background: skill.background }}
+                key={skill.id}
+              >
+                <span
+                  style={{ background: skill.background, color: skill.color }}
+                  className="skill-title"
+                >
+                  {skill.title}
+                </span>
+
+                {skill.isFontAwesome ? (
+                  <i className={skill.image} style={{ color: skill.color }}></i>
+                ) : (
+                  <img src={`/skills/${skill.image}`} className="skill-image" />
+                )}
+                <div className="progress-bar">
+                  <div
+                    className="progress-track"
+                    style={{
+                      width: `${skill.percentage}%`,
+                      background: skill.color,
+                    }}
+                  ></div>
+                </div>
+                <div className="percentage">{skill.percentage}%</div>
+              </motion.div>
+            </>
           ))}
         </div>
         <div className="skills-divider"></div>
@@ -98,7 +115,7 @@ function Skills({ skills, educations, certifications }: Props) {
           </motion.div>
         </div>
       </div>
-      <Link to="/skills" className="btn view-more-btn">
+      <Link to="/sce" className="btn view-more-btn">
         View More
       </Link>
     </div>

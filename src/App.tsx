@@ -1,12 +1,13 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 
 import HomeScreen from "./screens/HomeScreen";
 import Projects from "./screens/Projects";
-import Skills from "./screens/Skills";
-import Education from "./screens/Education";
 import Services from "./ServicesData";
-
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Skills from "./screens/Skills";
+import Certificates from "./screens/Certificates";
+import SCE from "./screens/SCE";
+import Education from "./screens/Education";
 
 function App() {
   return (
@@ -20,11 +21,7 @@ function App() {
               path="/projects"
               element={<Projects projects={Services.projects} />}
             />
-            <Route
-              path="/skills"
-              element={<Skills certifications={Services.certificates} />}
-            />
-            <Route path="/education" element={<Education />} />
+            <Route path="/sce" element={<SCE />}></Route>
           </Routes>
         </main>
       </>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../css/Project.scss";
+import "../css/Screens.scss";
 import ImageGallery from "react-image-gallery";
 import { motion } from "framer-motion";
 import { useInView } from "react-hook-inview";
