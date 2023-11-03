@@ -5,6 +5,7 @@ import Projects from "./screens/Projects";
 import Services from "./ServicesData";
 import SCE from "./screens/SCE";
 import Links from "./Links";
+import ScrollTop from "./components/overlays/ScrollTop";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
             <>
               <Header />
               <HomeScreen />
+              <ScrollTop />
             </>
           }
         />
