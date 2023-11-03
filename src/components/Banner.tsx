@@ -123,6 +123,7 @@ function Banner({ abouts }: Props) {
                             id="name"
                             name="name"
                             placeholder="Enter your name"
+                            required
                           />
                         </div>
                         <div className="form-group">
@@ -135,6 +136,7 @@ function Banner({ abouts }: Props) {
                             id="email"
                             name="email"
                             placeholder="Enter your email"
+                            required
                           />
                         </div>
                         <div className="form-group">
@@ -147,6 +149,7 @@ function Banner({ abouts }: Props) {
                             name="message"
                             placeholder="Let's create together..."
                             rows={3}
+                            required
                           ></textarea>
                         </div>
                         <button type="submit" className="btn">

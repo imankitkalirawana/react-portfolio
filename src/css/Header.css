@@ -342,4 +342,7 @@ footer .btn-primary {
   .sidebar {
     display: inherit;
   }
+  .footer-top .btns {
+    flex-direction: column;
+  }
 }

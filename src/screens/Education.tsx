@@ -22,7 +22,7 @@ function Educations({ educations }: Props) {
   return (
     <div className="section skills">
       {display.map((education) => (
-        <a href={education.link} className="education-card">
+        <a href={education.link} target="_blank" className="education-card">
           <li className="education-list-item">
             <i className="fa-regular fa-heading"></i>{" "}
             <span className="list-item-right">{education.title}</span>

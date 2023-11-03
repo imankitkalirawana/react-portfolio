@@ -90,7 +90,7 @@ a {
 }
 
 .btn:hover {
-  background: #ffffff1a;
+  opacity: 0.8;
 }
 
 .btn:focus {
@@ -570,7 +570,8 @@ textarea {
   opacity: 0.6;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border: 2px solid var(--primary);
   outline: 3px solid var(--secondary);
 }
@@ -641,10 +642,6 @@ footer {
   grid-gap: 1rem;
 }
 
-.footer-top .btns {
-  flex-direction: column;
-}
-
 .footer-main-heading {
   margin-top: 30px;
   color: var(--light-const);
@@ -700,10 +697,6 @@ footer {
 
 footer a {
   border: 2px dotted transparent;
-}
-
-footer a:hover {
-  color: var(--dark);
 }
 
 footer a:active {

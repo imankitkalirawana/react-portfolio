@@ -40,7 +40,7 @@ function Skills({ skills, educations, certifications }: Props) {
 
   return (
     <div ref={ref} className="section skills" id="skills">
-      <h2 className="topic-heading skills-heading">Skills & Education</h2>
+      <h2 className="topic-heading skills-heading">My Advantages</h2>
       <div className="skills-content">
         <div className="skills-content-left">
           {displaySkills.map((skill) => (

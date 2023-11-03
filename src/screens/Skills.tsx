@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import "../css/Screens.scss";
 import { useState } from "react";
+import Popup from "reactjs-popup";
+import "../css/Popup.css";
 
 type Props = {
   skills: {
@@ -10,6 +11,7 @@ type Props = {
     image: string;
     color: string;
     background: string;
+    description: string;
     isFontAwesome: boolean;
   }[];
 };
@@ -27,34 +29,52 @@ function Skills({ skills }: Props) {
           )
           .map((skill, index) => (
             <>
-              <div
-                className="skills-card-left animation-transition"
-                style={{ background: skill.background }}
-                key={index}
-              >
-                <span
-                  style={{ background: skill.background, color: skill.color }}
-                  className="skill-title"
-                >
-                  {skill.title}
-                </span>
-
-                {skill.isFontAwesome ? (
-                  <i className={skill.image} style={{ color: skill.color }}></i>
-                ) : (
-                  <img src={`/skills/${skill.image}`} className="skill-image" />
-                )}
-                <div className="progress-bar">
+              <Popup
+                trigger={
                   <div
-                    className="progress-track"
-                    style={{
-                      width: `${skill.percentage}%`,
-                      background: skill.color,
-                    }}
-                  ></div>
+                    className="skills-card-left animation-transition"
+                    style={{ background: skill.background }}
+                    key={index}
+                  >
+                    <span
+                      style={{
+                        background: skill.background,
+                        color: skill.color,
+                      }}
+                      className="skill-title"
+                    >
+                      {skill.title}
+                    </span>
+
+                    {skill.isFontAwesome ? (
+                      <i
+                        className={skill.image}
+                        style={{ color: skill.color }}
+                      ></i>
+                    ) : (
+                      <img
+                        src={`/skills/${skill.image}`}
+                        className="skill-image"
+                      />
+                    )}
+                    <div className="progress-bar">
+                      <div
+                        className="progress-track"
+                        style={{
+                          width: `${skill.percentage}%`,
+                          background: skill.color,
+                        }}
+                      ></div>
+                    </div>
+                    <div className="percentage">{skill.percentage}%</div>
+                  </div>
+                }
+              >
+                <div className="popup skills-popup-card">
+                  <h3 className="skills-popup-title">{skill.title}</h3>
+                  <span className="skills-popup-body">{skill.description}</span>
                 </div>
-                <div className="percentage">{skill.percentage}%</div>
-              </div>
+              </Popup>
             </>
           ))}
       </div>

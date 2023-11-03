@@ -91,7 +91,7 @@ function Contact({ contact }: Props) {
                   ></textarea>
                 </div>
                 <button className="btn btn-submit">
-                  Send it <i className="fa-regular fa-arrow-right"></i>
+                  Send it <i className="fa-regular fa-arrow-up-right"></i>
                 </button>
                 <input
                   type="hidden"

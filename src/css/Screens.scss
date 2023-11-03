@@ -286,6 +286,20 @@
   margin-top: 3rem;
 }
 
+.skills-popup-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.skills-popup-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--faded);
+  text-align: center;
+  font-family: var(--font-secondary);
+}
+
 // education
 .section {
   animation: popAndSlideUp 0.3s;

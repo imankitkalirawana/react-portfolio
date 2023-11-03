@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../css/Screens.scss";
 import { useState, useEffect } from "react";
 import { SkeletonTheme } from "react-loading-skeleton";
@@ -15,12 +14,18 @@ type Props = {
     image: string;
     institution: string;
     link: string;
+    year: string;
   }[];
 };
 
 function Certificates({ certifications }: Props) {
   const dir = "/certificates";
-  const display = [...certifications].sort((a, b) => b.priority - a.priority);
+  const display = [...certifications].sort((a, b) => {
+    if (a.priority == b.priority) {
+      return parseInt(b.year) - parseInt(a.year);
+    }
+    return a.priority - b.priority;
+  });
 
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
