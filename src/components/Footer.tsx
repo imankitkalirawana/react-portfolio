@@ -25,17 +25,17 @@ function Footer({ links }: Props) {
           Welcome to imankitkalirawana
         </h2>
         <div className="btns">
-          <a href="/blogs/blogadmin/membership_signup.php" className="btn">
+          <a href="/register" className="btn">
             Create an account
           </a>
-          <a href="/blogs/blogadmin/login.php" className="btn btn-primary">
+          <a href="/login" className="btn btn-primary">
             Login
           </a>
         </div>
       </motion.div>
 
       <div className="footer-middle">
-        <a href="/blogs" className="footer-logo">
+        <a href="/" className="footer-logo">
           <i className="fa-duotone fa-code"></i>
         </a>
         <nav
@@ -136,7 +136,7 @@ function Footer({ links }: Props) {
             </li>
           </ul>
           <ul className="footer-bottom-menu">
-            {links.slice(0, 4).map((link) => (
+            {links.slice(0, 5).map((link) => (
               <li className="footer-bottom-item" key={link.id}>
                 <a href={link.link} target="_blank">
                   <i className={link.icon}></i>

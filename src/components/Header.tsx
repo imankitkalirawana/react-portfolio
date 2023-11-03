@@ -73,17 +73,17 @@ function Header() {
                     <p>Home</p>
                   </li>
                 </Link>
-                <Link to="#skills">
+                <Link to="/#skills">
                   <li className="menu-item">
                     <p>Skills</p>
                   </li>
                 </Link>
-                <Link to="#about">
+                <Link to="/links">
                   <li className="menu-item">
-                    <p>About</p>
+                    <p>Links</p>
                   </li>
                 </Link>
-                <Link to="#contact">
+                <Link to="/#contact">
                   <li className="menu-item">
                     <p>Contact</p>
                   </li>
@@ -154,25 +154,25 @@ function Header() {
         <ul className="sidebar-menu">
           <Link to="/#">
             <li className="menu-item">
-              <i className="fa-solid fa-house"></i>
+              <i className="fa-regular fa-house"></i>
               <p>Home</p>
             </li>
           </Link>
           <Link to="#skills">
             <li className="menu-item">
-              <i className="fa-solid fa-code"></i>
+              <i className="fa-regular fa-code"></i>
               <p>Skills</p>
             </li>
           </Link>
-          <Link to="#about">
+          <Link to="/links">
             <li className="menu-item">
-              <i className="fa-solid fa-user"></i>
-              <p>About</p>
+              <i className="fa-regular fa-link-simple"></i>
+              <p>Links</p>
             </li>
           </Link>
-          <Link to="#contact">
+          <Link to="/#contact">
             <li className="menu-item">
-              <i className="fa-solid fa-envelope"></i>
+              <i className="fa-regular fa-envelope"></i>
               <p>Contact</p>
             </li>
           </Link>

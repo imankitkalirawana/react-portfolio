@@ -1,30 +1,51 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-
 import HomeScreen from "./screens/HomeScreen";
 import Projects from "./screens/Projects";
 import Services from "./ServicesData";
-import Skills from "./screens/Skills";
-import Certificates from "./screens/Certificates";
 import SCE from "./screens/SCE";
-import Education from "./screens/Education";
-
+import Links from "./Links";
 function App() {
   return (
     <Router>
-      <>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route
-              path="/projects"
-              element={<Projects projects={Services.projects} />}
-            />
-            <Route path="/sce" element={<SCE />}></Route>
-          </Routes>
-        </main>
-      </>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <HomeScreen />
+            </>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Header />
+              <Projects projects={Services.projects} />
+            </>
+          }
+        />
+        <Route
+          path="/sce"
+          element={
+            <>
+              <Header />
+              <SCE />
+            </>
+          }
+        />
+        <Route
+          path="/links"
+          element={
+            <>
+              <Header />
+              <Links links={Services.links} />
+            </>
+          }
+        />
+      </Routes>
     </Router>
   );
 }
