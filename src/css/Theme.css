@@ -21,7 +21,8 @@
   --lighter: #e0edef;
   --dark: #1d2429;
   --darker: #242c30;
-  --font: "Outfit", sans-serif;
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "JetBrains Mono", sans-serif;
   --faded: #8c8e90;
   --border: #e5ebe9;
   /* Constant colors */

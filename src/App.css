@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font);
+  font-family: var(--font-primary);
   box-sizing: border-box;
   background: var(--light);
   color: var(--dark);
@@ -101,6 +101,10 @@ a {
   outline: none;
 }
 
+.color {
+  color: var(--primary);
+}
+
 /* Banner */
 
 .banner-top {
@@ -157,6 +161,8 @@ a {
 }
 
 .banner-top .text-4 {
+  font-family: var(--font-secondary);
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -202,7 +208,7 @@ path {
   position: absolute;
   color: var(--primary);
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 800;
   left: 50%;
   transform: translate(-50%) translateY(-15px);
   text-transform: uppercase;
@@ -441,7 +447,7 @@ path {
   border-radius: 20px;
   padding: 25px;
   margin: 50px auto;
-  max-width: 1200px;
+  position: relative;
 }
 
 .about-up {
@@ -459,8 +465,12 @@ path {
 
 .about-pitch {
   max-width: 356px;
+  font-weight: 400;
   font-size: 16px;
   text-align: center;
+  font-style: italic;
+  /* line-height: 1; */
+  /* font-family: var(--font-secondary); */
 }
 
 .about-name {

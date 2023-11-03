@@ -37,7 +37,8 @@ function About({ abouts }: Props) {
               transition={{ duration: 0, delay: 0.2 }}
               className="about-pitch animation-transition"
             >
-              <i>" {about.quote}"</i>
+              <span className="color">"</span>
+              {about.quote}
             </motion.p>
             <motion.h4
               initial={{ opacity: 0, scale: 0.5 }}

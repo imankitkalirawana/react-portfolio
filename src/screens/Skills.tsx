@@ -25,12 +25,12 @@ function Skills({ skills }: Props) {
           .filter((skill) =>
             skill.title.toLowerCase().includes(searchQuery.toLowerCase())
           )
-          .map((skill) => (
+          .map((skill, index) => (
             <>
               <div
                 className="skills-card-left animation-transition"
                 style={{ background: skill.background }}
-                key={skill.id}
+                key={index}
               >
                 <span
                   style={{ background: skill.background, color: skill.color }}
