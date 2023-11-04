@@ -16,7 +16,7 @@ type ProjectsProps = {
     link: string;
     previewLink: string;
   }[];
-}; 
+};
 
 function Project({ projects }: ProjectsProps) {
   const projectDir = "/projects";
