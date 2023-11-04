@@ -44,6 +44,7 @@ function App() {
             <>
               <Header />
               <Links links={Services.links} />
+              <ScrollTop />
             </>
           }
         />

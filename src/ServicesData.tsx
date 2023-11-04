@@ -247,7 +247,7 @@ const Services = {
     {
       id: 4,
       title: "Python",
-      percentage: 70,
+      percentage: 50,
       image: "fa-brands fa-python",
       description:
         "Proficient in Python basics, I have a strong foundation in programming, enabling me to tackle a wide range of tasks and solve problems efficiently.",
@@ -258,7 +258,7 @@ const Services = {
     {
       id: 5,
       title: "React",
-      percentage: 75,
+      percentage: 65,
       image: "fa-brands fa-react",
       description:
         "I specialize in React.js, a powerful library for building dynamic and interactive user interfaces. With expertise in component-driven development, I create responsive and engaging web applications that provide a seamless user experience.",
@@ -269,7 +269,7 @@ const Services = {
     {
       id: 6,
       title: "Node",
-      percentage: 70,
+      percentage: 50,
       image: "fa-brands fa-node-js",
       description:
         "I'm in the process of mastering Node.js, a server-side JavaScript runtime, to build scalable and efficient web applications.",
@@ -302,7 +302,7 @@ const Services = {
     {
       id: 9,
       title: "MongoDB",
-      percentage: 70,
+      percentage: 60,
       image: "fa-brands fa-envira",
       description:
         "Currently exploring MongoDB to gain proficiency in NoSQL database management and enhance my data storage and retrieval skills.",
@@ -324,7 +324,7 @@ const Services = {
     {
       id: 11,
       title: "C++",
-      percentage: 70,
+      percentage: 50,
       image: "cpp.png",
       description:
         "I am in the early stages of learning C++, a general-purpose programming language, to manage and collaborate on software development projects.",
@@ -335,7 +335,7 @@ const Services = {
     {
       id: 12,
       title: "BootStrap",
-      percentage: 70,
+      percentage: 80,
       image: "fa-brands fa-bootstrap",
       description:
         "I have a deep understanding of Bootstrap, leveraging its responsive design and UI components to create aesthetically pleasing and user-friendly web interfaces.",
@@ -346,7 +346,7 @@ const Services = {
     {
       id: 13,
       title: "Canva",
-      percentage: 70,
+      percentage: 90,
       image: "canva.png",
       description:
         "I have a deep understanding of Canva, leveraging its responsive design and UI components to create aesthetically pleasing and user-friendly web interfaces.",
