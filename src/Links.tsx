@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./css/Links.css";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 type Props = {
   links: {
@@ -19,23 +20,13 @@ const Links = ({ links }: Props) => {
 
   return (
     <>
+      <Helmet>
+        <title>Links - Divinely Developer</title>
+      </Helmet>
       <div className="container links">
-        <div className="container-up">
-          <div className="container-img">
-            <img
-              src="/imankitkalirawana.jpg"
-              width="100"
-              alt="imankitkalirawana"
-            />
-          </div>
-          <div className="container-title">
-            <h1>@imankitkalirawana</h1>
-          </div>
-        </div>
-
         <div className="container-middle">
           <div className="section-header">
-            <Link to="/#projects" className="btn btn-back">
+            <Link to="/" className="btn btn-back">
               <i className="fa-solid fa-arrow-left"></i>
             </Link>
             <input

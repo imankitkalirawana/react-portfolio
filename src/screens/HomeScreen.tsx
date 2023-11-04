@@ -10,7 +10,6 @@ import Footer from "../components/Footer";
 function HomeScreen() {
   return (
     <>
-      {" "}
       <Banner abouts={Services.aboutMe} />
       <Specilize services={Services.services} />
       <Projects projects={Services.projects} />
@@ -24,5 +23,6 @@ function HomeScreen() {
       <Footer links={Services.links} />
     </>
   );
+  // });
 }
 export default HomeScreen;

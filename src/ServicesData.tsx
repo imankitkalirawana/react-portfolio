@@ -3,8 +3,10 @@ const Services = {
     {
       id: 1,
       title: "Divinely Developer",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      logo: "/favicon.ico",
+      description:
+        "Discover the portfolio of Bhuneshvar, a highly skilled web developer well-versed in ReactJS and NodeJS. With a passion for freelancing, I create dynamic and user-friendly web solutions tailored to your needs.",
+      logo: "favicon.ico",
+      keywords: "dkfj",
       specilize: "Web Developer",
       link: "https://divinelydeveloper.me",
       contact: "+91 7888812282",

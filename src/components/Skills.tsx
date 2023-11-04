@@ -43,7 +43,7 @@ function Skills({ skills, educations, certifications }: Props) {
       <h2 className="topic-heading skills-heading">My Advantages</h2>
       <div className="skills-content">
         <div className="skills-content-left">
-          {displaySkills.map((skill) => (
+          {displaySkills.map((skill, index) => (
             <>
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -55,7 +55,7 @@ function Skills({ skills, educations, certifications }: Props) {
                 transition={{ duration: 0 }}
                 className="skills-card-left animation-transition"
                 style={{ background: skill.background }}
-                key={skill.id}
+                key={index}
               >
                 <span
                   style={{ background: skill.background, color: skill.color }}
@@ -91,8 +91,8 @@ function Skills({ skills, educations, certifications }: Props) {
             transition={{ duration: 0 }}
             className="education-card education-crd animation-transition"
           >
-            {displayEducation.map((education) => (
-              <div className="education-pre" key={education.id}>
+            {displayEducation.map((education, index) => (
+              <div className="education-pre" key={index}>
                 <h3>{education.title}</h3>
                 <p>
                   {education.institutionShort} ({education.year})
@@ -106,8 +106,8 @@ function Skills({ skills, educations, certifications }: Props) {
             transition={{ duration: 0, delay: 0.3 }}
             className="education-card certificate-crd animation-transition"
           >
-            {displayCertification.map((certification) => (
-              <div className="education-pre" key={certification.id}>
+            {displayCertification.map((certification, index) => (
+              <div className="education-pre" key={index}>
                 <h3>{certification.title}</h3>
                 <p>{certification.institution}</p>
               </div>
