@@ -19,9 +19,14 @@ function Contact({ contact }: Props) {
         <h2 className="topic-heading contact-heading">Stay Connected</h2>
         <div className="contact-pre">
           <motion.div
-            initial={{ opacity: 0, x: -150 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -150 }}
+            variants={{
+              hidden: { opacity: 0, x: -150 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
             transition={{ duration: 0 }}
+            viewport={{ once: true }}
             className="contact-left animation-transition"
           >
             <div className="contact-left-up">
@@ -42,15 +47,24 @@ function Contact({ contact }: Props) {
             </a>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 150 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 150 }}
+            variants={{
+              hidden: { opacity: 0, y: 150 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             transition={{ duration: 0 }}
             className="skills-divider animation-transition"
           ></motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 150 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
-            transition={{ duration: 0 }}
+            variants={{
+              hidden: { opacity: 0, x: 150 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="contact-right animation-transition"
           >
             <div className="contact-left-up">

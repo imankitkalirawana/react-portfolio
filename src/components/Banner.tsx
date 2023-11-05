@@ -1,7 +1,8 @@
 import ReactTyped from "react-typed";
 import Popup from "reactjs-popup";
 import { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-hook-inview";
 
 type Props = {
   abouts: {
@@ -16,16 +17,7 @@ type Props = {
 function Banner({ abouts }: Props) {
   const typingText = abouts[0].professions;
 
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const mainControls = useAnimation();
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    } else {
-      mainControls.start("hidden");
-    }
-  }, [isInView, mainControls]);
+  const [ref, isInView] = useInView();
 
   return (
     <>
@@ -40,8 +32,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="text-1 animation-transition"
                 >
                   Hello, I'm
@@ -52,8 +47,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="text-2 animation-transition"
                 >
                   {about.name}
@@ -64,8 +62,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="text-3 animation-transition"
                 >
                   I'm a{" "}
@@ -84,8 +85,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="text-4 animation-transition"
                 >
                   {about.tagline}
@@ -96,8 +100,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="btns animation-transition"
                 >
                   <Popup
@@ -182,8 +189,11 @@ function Banner({ abouts }: Props) {
                     visible: { opacity: 1, x: 0 },
                   }}
                   initial="hidden"
-                  animate={mainControls}
+                  whileInView="visible"
                   transition={{ duration: 0 }}
+                  viewport={{
+                    once: true,
+                  }}
                   className="avatar-img animation-transition"
                   src={about.image}
                   alt={about.name}

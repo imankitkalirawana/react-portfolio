@@ -24,12 +24,12 @@ function Specilize({ services }: SpecializeProps) {
     {
       initial: { opacity: 0, y: 120 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration: 0 },
+      transition: { duration: 0, delay: 0.2 },
     },
     {
       initial: { opacity: 0, x: 120 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration: 0 },
+      transition: { duration: 0, delay: 0.4 },
     },
   ];
   return (
@@ -39,11 +39,21 @@ function Specilize({ services }: SpecializeProps) {
       <div className="specilize-content">
         {displayServices.map((service, index) => (
           <motion.div
-            initial={itemAnimations[index].initial}
-            animate={isInView ? itemAnimations[index].animate : {}}
-            transition={itemAnimations[index].transition}
+            // initial={itemAnimations[index].initial}
+            // animate={isInView ? itemAnimations[index].animate : {}}
+            // transition={itemAnimations[index].transition}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0 }}
+            viewport={{
+              once: true,
+            }}
             className="specilize-card animation-transition"
-            key={service.id}
+            key={index}
           >
             <i
               className={service.image}

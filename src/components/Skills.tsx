@@ -27,6 +27,51 @@ type Props = {
   }[];
 };
 
+const skillsAnimation = {
+  initial: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0,
+      delay: index * 0.1,
+    },
+  }),
+};
+
+const educationAnimation = {
+  initial: {
+    opacity: 0,
+    x: 120,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0,
+      delay: 0.1 * index,
+    },
+  }),
+};
+
+const certificateAnimation = {
+  initial: {
+    opacity: 0,
+    x: 120,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0,
+      delay: 0.2 * index,
+    },
+  }),
+};
+
 function Skills({ skills, educations, certifications }: Props) {
   const [ref, isInView] = useInView();
 
@@ -46,15 +91,15 @@ function Skills({ skills, educations, certifications }: Props) {
           {displaySkills.map((skill, index) => (
             <>
               <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={
-                  isInView
-                    ? { opacity: 1, scale: 1 }
-                    : { opacity: 0, scale: 0.5 }
-                }
-                transition={{ duration: 0 }}
+                variants={skillsAnimation}
+                initial="initial"
+                whileInView="animate"
                 className="skills-card-left animation-transition"
                 style={{ background: skill.background }}
+                custom={index}
+                viewport={{
+                  once: true,
+                }}
                 key={index}
               >
                 <span
@@ -85,34 +130,45 @@ function Skills({ skills, educations, certifications }: Props) {
         </div>
         <div className="skills-divider"></div>
         <div className="skills-content-right">
-          <motion.div
-            initial={{ opacity: 0, x: 120 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 120 }}
-            transition={{ duration: 0 }}
-            className="education-card education-crd animation-transition"
-          >
+          <div className="education-card education-crd">
             {displayEducation.map((education, index) => (
-              <div className="education-pre" key={index}>
+              <motion.div
+                variants={educationAnimation}
+                initial="initial"
+                key={index}
+                custom={index}
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+                className="education-pre animation-transition"
+              >
                 <h3>{education.title}</h3>
                 <p>
                   {education.institutionShort} ({education.year})
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 120 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 120 }}
-            transition={{ duration: 0, delay: 0.3 }}
-            className="education-card certificate-crd animation-transition"
-          >
+          </div>
+
+          <div className="education-card certificate-crd ">
             {displayCertification.map((certification, index) => (
-              <div className="education-pre" key={index}>
+              <motion.div
+                variants={certificateAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                key={index}
+                viewport={{
+                  once: true,
+                }}
+                className="education-pre animation-transition"
+              >
                 <h3>{certification.title}</h3>
                 <p>{certification.institution}</p>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
       <Link to="/sce" className="btn view-more-btn">

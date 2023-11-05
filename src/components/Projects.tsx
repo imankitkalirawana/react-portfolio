@@ -36,23 +36,29 @@ function Project({ projects }: ProjectsProps) {
       transition: { duration: 0 },
     },
   ];
+  const [ref, isInView] = useInView();
 
   return (
-    <div className="projects home-projects" id="projects">
+    <div ref={ref} className="projects home-projects" id="projects">
       <div className="section-header">
         <h2 className="topic-heading projects-heading">Projects</h2>
       </div>
       <div className="project-items">
         {displayProjects.map((project, index) => {
-          const [ref, isInView] = useInView();
           return (
             <motion.div
-              initial={itemAnimations[index].initial}
-              animate={isInView ? itemAnimations[index].animate : {}}
-              transition={itemAnimations[index].transition}
+              variants={{
+                hidden: { opacity: 0, x: index % 2 == 0 ? 220 : -220 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0 }}
+              viewport={{
+                once: true,
+              }}
               className="project-item animation-transition"
-              key={project.id}
-              ref={ref}
+              key={index}
             >
               <a
                 href={project.previewLink}
