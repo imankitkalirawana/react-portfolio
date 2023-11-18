@@ -1,5 +1,6 @@
-import ReactTyped from "react-typed";
+import React from "react";
 import Popup from "reactjs-popup";
+import { TypeAnimation } from "react-type-animation";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-hook-inview";
@@ -15,8 +16,6 @@ type Props = {
 };
 
 function Banner({ abouts }: Props) {
-  const typingText = abouts[0].professions;
-
   const [ref, isInView] = useInView();
 
   return (
@@ -71,11 +70,20 @@ function Banner({ abouts }: Props) {
                 >
                   I'm a{" "}
                   <span className="typing">
-                    <ReactTyped
-                      strings={typingText}
-                      typeSpeed={100}
-                      backSpeed={60}
-                      loop
+                    <TypeAnimation
+                      sequence={[
+                        "Developer",
+                        1000,
+                        "Designer",
+                        1000,
+                        "Programmer",
+                        1000,
+                        "Machine Learner",
+                        1000,
+                        "Freelancer",
+                      ]}
+                      speed={1}
+                      repeat={Infinity}
                     />
                   </span>
                 </motion.h4>
