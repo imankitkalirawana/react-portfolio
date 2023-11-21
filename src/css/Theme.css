@@ -16,7 +16,7 @@
   --primary: #5d74bb;
   --secondary: #c7c8da;
   --primary-hover: #34296e83;
-  --light: #e9f7f7;
+  --light: rgb(237, 239, 247);
   /* --light: #d5d5d5; */
   --lighter: #e0edef;
   --dark: #1d2429;

@@ -1,7 +1,6 @@
-import React from "react";
+import { useRef } from "react";
 import Popup from "reactjs-popup";
 import { TypeAnimation } from "react-type-animation";
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-hook-inview";
 
@@ -16,7 +15,7 @@ type Props = {
 };
 
 function Banner({ abouts }: Props) {
-  const [ref, isInView] = useInView();
+  const ref = useRef(null);
 
   return (
     <>
