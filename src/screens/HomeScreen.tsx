@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 import Services from "../ServicesData";
 import Footer from "../components/Footer";
 
-function HomeScreen() {
+function HomeScreen() { 
   return (
     <>
       <Banner abouts={Services.aboutMe} />

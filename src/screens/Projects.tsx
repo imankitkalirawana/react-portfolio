@@ -13,8 +13,11 @@ type ProjectsProps = {
     title: string;
     images: string[];
     description: string;
+    priority: number;
     technologies: string;
     link: string;
+    startDate: string;
+    endDate: string;
     previewLink: string;
   }[];
 };
@@ -29,6 +32,19 @@ function Project({ projects }: ProjectsProps) {
       setIsLoading(false);
     }, 500);
   }, []);
+
+  // sort by priority and start date
+  projects.sort((a, b) => {
+    if (a.priority > b.priority) return 1;
+    else if (a.priority < b.priority) return -1;
+    else {
+      const aDate = new Date(a.startDate);
+      const bDate = new Date(b.startDate);
+      if (aDate > bDate) return -1;
+      else if (aDate < bDate) return 1;
+      else return 0;
+    }
+  });
 
   return (
     <>

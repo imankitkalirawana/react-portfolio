@@ -7,6 +7,7 @@ import SCE from "./screens/SCE";
 import Links from "./Links";
 import ScrollTop from "./components/overlays/ScrollTop";
 import { Helmet } from "react-helmet";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
           />
         </Routes>
       </Router>
+      <Analytics />
     </>
   );
 }

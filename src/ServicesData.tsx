@@ -126,6 +126,7 @@ const Services = {
       previewLink: "https://div-calculator-imankitkalirawana.vercel.app",
       startDate: "2023-03-12",
       endDate: "2023-04-1",
+      priority: 1,
       images: [
         "div-calculator-1.png",
         "div-calculator-2.png",
@@ -143,6 +144,7 @@ const Services = {
       previewLink: "https://blog-imankitkalirawana.vercel.app",
       startDate: "2022-11-04",
       endDate: "2022-11-18",
+      priority: 1,
       images: ["blog-homepage.png", "blog-page.png"],
     },
     {
@@ -155,6 +157,7 @@ const Services = {
       previewLink: "/error-404",
       startDate: "2023-06-01",
       endDate: "2023-07-01",
+      priority: 1,
       images: [
         "school-management-system-1.png",
         "school-management-system-2.png",
@@ -172,6 +175,7 @@ const Services = {
       previewLink: "https://links-imankitkalirawana.vercel.app",
       startDate: "2022-10-18",
       endDate: "2022-10-24",
+      priority: 3,
       images: ["links-1.png"],
     },
     {
@@ -184,6 +188,7 @@ const Services = {
       previewLink: "https://analog-clock-imankitkalirawana.vercel.app",
       startDate: "2022-09-01",
       endDate: "2022-09-01",
+      priority: 3,
       images: ["analog-clock.png"],
     },
     {
@@ -195,6 +200,7 @@ const Services = {
       previewLink: "/error-404",
       startDate: "2023-04-05",
       endDate: "2023-05-15",
+      priority: 3,
       images: ["fod-livings.png"],
     },
     {
@@ -208,6 +214,7 @@ const Services = {
         "https://international-business-imankitkalirawana.vercel.app",
       startDate: "2023-09-24",
       endDate: "2023-09-28",
+      priority: 3,
       images: ["international-business.png"],
     },
     {
@@ -220,6 +227,7 @@ const Services = {
       previewLink: "https://gagan-institution-imankitkalirawana.vercel.app",
       startDate: "2022-09-10",
       endDate: "2022-09-18",
+      priority: 3,
       images: ["gagan-institution.png"],
     },
     {
@@ -232,7 +240,21 @@ const Services = {
       previewLink: "https://credit-card-imankitkalirawana.vercel.app",
       startDate: "2022-12-01",
       endDate: "2022-12-04",
+      priority: 3,
       images: ["credit-card.png"],
+    },
+    {
+      id: 10,
+      title: "Portfolio Website",
+      description:
+        "The Portfolio Website is a static web application that showcases my skills, projects, and experience. Crafted with HTML, CSS, and JavaScript, this website offers a comprehensive overview of my professional journey, providing a glimpse into my skills and expertise.",
+      technologies: "HTML, CSS, ReactJs",
+      link: "",
+      previewLink: "https://portfolio-imankitkalirawana.vercel.app",
+      startDate: "2023-08-01",
+      endDate: "2023-10-01",
+      priority: 2,
+      images: ["portfolio.png"],
     },
   ],
   skills: [
@@ -434,7 +456,7 @@ const Services = {
     },
     {
       id: 3,
-      priority: 2,
+      priority: 3,
       title: "Getting Started with AI and Machine Learning",
       image: "3.png",
       institution: "LinkedIn",

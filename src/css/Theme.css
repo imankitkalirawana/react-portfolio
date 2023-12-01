@@ -31,6 +31,9 @@
   --bg-ambient: rgba(255, 255, 255, 0.318);
   --blur: blur(300px);
   --primary-light: #fff;
+  --danger: #ec6a5e;
+  --warning: #f9c851;
+  --success: #68e179;
   /* --font-dark: #2f2f2f;
     --font-light: #fff;
     --font-faded: #2c3f50;
